@@ -101,7 +101,8 @@ h4 {
 }
 
 .about-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     flex-direction: row;
     margin-top: 3rem;
 }
@@ -115,30 +116,40 @@ h4 {
     line-height: 25px;
 }
 
-.image_self {
-    height: 30rem;
-    width: 100vw;
-}
-
 .image_self img {
-    object-fit: contain;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 @media(max-width: 53rem) {
     .about-container {
+        display: flex;
         flex-direction: column;
     }
 
     .image_self {
-        display: flex;
         justify-content: center;
     }
-}
 
+    .about {
+        margin-left: unset;
+        margin-top: 2rem;
+    }
 
-@media(max-width: 428px) {
-    .image_self img {
-        width: 100vw;
-        height: 100vh;
+    .navbar-name {
+        padding-left: 1rem;
+    }
+
+    .navbar-toggler {
+        margin-right: 1rem;
+    }
+
+    .navbar-expand {
+        flex-wrap: wrap !important;
+    }
+
+    .navbar-expand .navbar-nav {
+        flex-wrap: wrap;
     }
 }
