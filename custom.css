@@ -114,3 +114,31 @@ h4 {
     font-size: 1.1rem;
     line-height: 25px;
 }
+
+.image_self {
+    height: 30rem;
+    width: 100vw;
+}
+
+.image_self img {
+    object-fit: contain;
+}
+
+@media(max-width: 53rem) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .image_self {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+@media(max-width: 428px) {
+    .image_self img {
+        width: 100vw;
+        height: 100vh;
+    }
+}
