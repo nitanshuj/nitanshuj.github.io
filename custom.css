@@ -105,6 +105,11 @@ h4 {
     grid-template-columns: 1fr 2fr;
     flex-direction: row;
     margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.skills {
+    font-size: 1.1rem;
 }
 
 .about {
