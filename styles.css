@@ -1,0 +1,194 @@
+/* General Section Styling */
+section {
+  padding: 60px 0; /* Consistent padding for all sections */
+}
+
+section h2 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+section p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* Background Colors for Alternating Sections */
+.bg-light-gray {
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+.bg-white {
+  background-color: #ffffff; /* White background */
+}
+
+/* Navigation Bar */
+.navbar-section {
+  background-color: #f8f9fa; /* Light gray background for contrast */
+  border-bottom: 1px solid #ddd; /* Subtle border below the navbar */
+}
+
+.navbar {
+  width: 100%; /* Full-width navbar */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  margin: 0 15px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff; /* Highlight color on hover */
+}
+
+/* Hero Section */
+.hero-section {
+  height: calc(100vh - 56px); /* Full height minus navbar height */
+  background: linear-gradient(to right, #343a40, #212529);
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+}
+
+/* About Section */
+/* #about img {
+  max-width: 200px; /* Profile image size */
+/* } */ 
+
+#about p {
+  font-size: 1.2rem; /* Slightly larger text for emphasis */
+}
+
+/* Projects Section */
+#projects .card {
+  border: none;
+}
+
+#projects .card-img-top {
+  height: 200px;
+  object-fit: cover; /* Maintain image aspect ratio */
+}
+
+#projects .card-title {
+  font-size: 1.25rem;
+}
+
+#projects .card-text {
+  font-size: 0.95rem;
+}
+
+#projects .text-muted {
+  font-size: 0.85rem;
+}
+
+.badge {
+  font-size: 0.8em;
+  padding: 0.4em 0.7em;
+}
+
+.skill-badge {
+  background-color: #e9ecef;  /* Light gray background */
+  color: #638f65;             /* Dark gray text */
+  font-size: 0.8em;
+  padding: 0.4em 0.7em;
+  border-radius: 0.25rem;
+}
+
+.big-square-img {
+  width: 400px;     /* Adjust this pixel value for your desired width */
+  height: 400px;    /* Keeps the image square */
+  object-fit: cover;  /*Ensures the image fills the square without distortion */
+ 
+  /* margin: 0 auto;   Centers the image within its container */
+}
+
+
+/* Skills Section */
+#skills,
+#projects,
+#main {
+  background-color: #f8f9fa; /* Consistent light gray background for clarity */
+}
+
+/* Contact Section */
+#contact a {
+  background-color: #ffffff; /* White background for contrast with other sections */
+  margin: 0 10px;
+}
+
+
+
+
+/* What I Do Section */
+#what-i-do {
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+#what-i-do h2 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#what-i-do h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.tech-icon {
+  width: 70px;
+  height: 70px;
+  object-fit: contain; /* Ensures proper scaling of icons */
+}
+
+.what-i-do-list {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.what-i-do-list li {
+  margin-bottom: 15px;
+}
+
+.what-i-do-list span {
+  font-size: 1.2rem; /* Lightning bolt icon size */
+}
+
+/* ML Ops Section */
+#ml-ops {
+  background-color: #f8f9fa; /* Light gray background for consistency */
+}
+
+#ml-ops h2 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#ml-ops p {
+  font-size: 1rem;
+  color: #6c757d; /* Muted text color */
+}
+
+
+#what-i-do-cards h4 {
+  font-weight: bold;
+}
+
+#what-i-do-cards .what-i-do-list {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+#what-i-do-cards .what-i-do-list li {
+  margin-bottom: 10px;
+}
