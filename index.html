@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nitanshu Joshi</title>
+    <title>Nitanshu Joshi | Data Scientist</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -11,21 +11,22 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="FAVICON/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="manifest" href="/site.webmanifest">
-
   </head>
-  
   
   <body>    
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container text-center">
-        <a class="navbar-brand" href="#">Nitanshu Joshi Portfolio</a>
+        <a class="navbar-brand" href="#">Nitanshu Joshi</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,501 +34,705 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#what-i-do-cards">What I Do</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-            <!-- <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li> -->
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#active-projects">Active Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#articles">Articles</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
             <li class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/1b-YziI1p6epcfKmDKPWWMnc3F9HDE3Xz/edit?usp=sharing&ouid=105296609947584041402&rtpof=true&sd=true" target="_blank">Resume</a></li>
           </ul>
         </div>
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+          </label>
+        </div>
       </div>
     </nav>
-  
-<!-- ----------------------------------------------------------------------------- -->
 
     <!-- Hero Section -->
-    <section class="hero-section d-flex align-items-center text-center text-white bg-dark">
+    <section class="hero-section d-flex align-items-center text-center text-white">
       <div class="container">
-        <h1 class="display-4 mb-4">Nitanshu Joshi</h1>
-        <h3 class="mb-4">Data Scientist</h3>
-        <p class="lead mb-4">Transforming data into actionable insights</p>
-        <p class="lead mb-4">Excellent at Prompt Engineering using ChatGPT</p>
-
-        <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+        <div data-aos="fade-up" data-aos-duration="1000">
+          <h1 class="display-4 mb-4">Nitanshu Joshi</h1>
+          <h3 class="mb-4 typing-text">Data Scientist | Machine Learning Engineer | AI Engineer</h3>
+          <p class="lead mb-4">Transforming business problems into AI-based applications</p>
+          <!-- <p class="lead mb-4">Excellent at Prompt Engineering using ChatGPT</p> -->
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg ml-3">Contact Me</a>
+          </div>
+        </div>
+        <div class="scroll-down">
+          <a href="#about"><i class="fas fa-chevron-down"></i></a>
+        </div>
       </div>
     </section>
 
-<!-- ----------------------------------------------------------------------------- -->
-      <!-- About Section -->
-    <section id="about" class="section-padding bg-light-gray">
+    <!-- About Section -->
+    <section id="about" class="section-padding">
       <div class="container">
-        <h2 class="text-center mb-5">About Me</h2>
+        <h2 class="section-title" data-aos="fade-up">About Me</h2>
         <div class="row align-items-center">
-          <div class="col-md-6 text-center">
-            <!-- Using the class 'big-square-img' to force a larger square image -->
-            <img src="potraits/Nitanshu_Joshi_3.jpg" alt="Profile Photo" class="big-square-img mb-4">
+          <div class="col-md-6 text-center" data-aos="fade-right" data-aos-delay="200">
+            <div class="profile-img-container">
+              <img src="potraits/Nitanshu_Joshi_3.jpg" alt="Profile Photo" class="big-square-img mb-4">
+            </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-left" data-aos-delay="300">
             <p class="lead text-justify mb-4">
-              
-              I am a Result-Driven Data Scientist with 2.5 years of experience in developing and deploying machine learning models.<br><br> 
+              I am a Result-Driven Data Scientist with 2+ years of experience in developing and deploying machine learning models.
+            </p>
+            <p class="lead text-justify mb-4">
               With experience in building scalable solutions, such as recommendation systems and predictive models, 
-              I have successfully driven user engagement and operational efficiency. <br><br> 
-              
-              <!-- My expertise spans Python, SQL, cloud platforms like AWS and Azure, and tools like Power BI and Tableau.
-             <br><br>  -->
-              
+              I have successfully driven user engagement and operational efficiency.
+            </p>
+            <p class="lead text-justify mb-4">
               My commitment to continuous learning and collaboration enables me to 
               deliver actionable insights and transformative results.
             </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-number">2+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <!-- <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Projects Completed</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">ML Models Deployed</span>
+              </div> -->
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- What I Do - Cards Section -->
+    <section id="what-i-do-cards" class="py-5">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">What I Do</h2>
+        <div class="row">
+          <!-- Card 1: Data Science & ML -->
+          <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card skill-card h-100">
+              <div class="card-body">
+                <h4 class="card-title mb-3 text-center">Data Science & ML</h4>
+                <div class="d-flex justify-content-center mb-3 tech-icons">
+                  <img src="/icons/tensorflow-icon.png" alt="TensorFlow" class="tech-icon mx-2">
+                  <img src="/icons/scikit-learn-icon.png" alt="Scikit-Learn" class="tech-icon mx-2">
+                  <img src="/icons/pytorch-icon.png" alt="PyTorch" class="tech-icon mx-2">
+                  <img src="/icons/python-icon.jpg" alt="Python" class="tech-icon mx-2">
+                  <img src="icons/aws-sagemaker-icon.png" alt="GitLab CI/CD" class="tech-icon mx-2">
+                </div>
+                <ul class="list-unstyled what-i-do-list text-center">
+                  <li><span class="feature-icon">&#9889;</span> Deploying scalable production-ready models</li>
+                  <li><span class="feature-icon">&#9889;</span> Expertise in Natural Language Processing</li>
+                  <li><span class="feature-icon">&#9889;</span> Time series analysis and forecasting</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Data Engineering -->
+          <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card skill-card h-100">
+              <div class="card-body">
+                <h4 class="card-title mb-3 text-center">Data Engineering</h4>
+                <div class="d-flex justify-content-center mb-3 tech-icons">
+                  <img src="/icons/PostgreSQL-Icon.jpg" alt="Postgre SQL" class="tech-icon mx-2">
+                  <img src="/icons/snowflake-icon.png" alt="Snowflake" class="tech-icon mx-2">
+                  <img src="/icons/amazon-redshift.png" alt="Amazon Redshift" class="tech-icon mx-2">
+                  <img src="/icons/apache-spark-icon.png" alt="Apache Spark" class="tech-icon mx-2">
+                  <img src="/icons/kafka-icon.png" alt="Kafka" class="tech-icon mx-2">
+                </div>
+                <ul class="list-unstyled what-i-do-list text-center">
+                  <li><span class="feature-icon">&#9889;</span> Building data pipelines for ETL processes</li>
+                  <li><span class="feature-icon">&#9889;</span> Managing big data with Snowflake and Spark</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Data Analysis and Business Analysis -->
+          <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card skill-card h-100">
+              <div class="card-body">
+                <h4 class="card-title mb-3 text-center">Data Analysis & Business Analysis</h4>
+                <div class="d-flex justify-content-center mb-3 tech-icons">
+                  <img src="/icons/tableau-icon.png" alt="Tableau" class="tech-icon mx-2">
+                  <img src="/icons/powerbi-icon.png" alt="Power BI" class="tech-icon mx-2">
+                  <img src="/icons/python-icon.jpg" alt="Python" class="tech-icon mx-2">
+                  <img src="/icons/excel-icon.png" alt="Excel" class="tech-icon mx-2">
+                </div>
+                <ul class="list-unstyled what-i-do-list text-center">
+                  <li><span class="feature-icon">&#9889;</span> Performing data analysis using SQL and Python</li>
+                  <li><span class="feature-icon">&#9889;</span> Creating insightful dashboards with Tableau/Power BI</li>
+                  <li><span class="feature-icon">&#9889;</span> Conducting statistical analysis for decision-making</li>
+                  <li><span class="feature-icon">&#9889;</span> Expertise in root cause analysis and A/B testing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: LLM and GenAI -->
+          <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="card skill-card h-100">
+              <div class="card-body">
+                <h4 class="card-title mb-3 text-center">LLM & GenAI</h4>
+                <div class="d-flex justify-content-center mb-3 tech-icons">
+                  <img src="/icons/hugging-face-icon.png" alt="Hugging Face" class="tech-icon mx-2">
+                  <img src="/icons/langchain-icon.png" alt="Langchain" class="tech-icon mx-2">
+                  <img src="/icons/chroma-db-icon.png" alt="Chroma Db" class="tech-icon mx-2">
+                  <img src="/icons/langgraph-icon.png" alt="Lang Graph" class="tech-icon mx-2">
+                  <img src="/icons/crew-ai-icon.png" alt="Crew AI" class="tech-icon mx-2">
+                </div>
+                <ul class="list-unstyled what-i-do-list text-center">
+                  <li><span class="feature-icon">&#9889;</span> Designing production-ready RAG applications </li>
+                  <li><span class="feature-icon">&#9889;</span> Fine-tuning LLMs for custom applications</li>
+                  <li><span class="feature-icon">&#9889;</span> Converting business ideas to apps using AI</li>
+                  <li><span class="feature-icon">&#9889;</span> Implementing vector search for semantic retrieval</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: ML OPs and Deployment -->
+          <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
+            <div class="card skill-card h-100">
+              <div class="card-body">
+                <h4 class="card-title mb-3 text-center">MLOps & CI/CD</h4>
+                <div class="d-flex justify-content-center mb-3 tech-icons">
+                  <img src="icons/docker-icon.png" alt="Docker" class="tech-icon mx-2">
+                  <img src="icons/git-logo.png" alt="Git" class="tech-icon mx-2"> 
+                  <img src="icons/mlflow-icon.png" alt="MLflow" class="tech-icon mx-2">  
+                  <img src="icons/apache-airflow-icon.png" alt="Airflow" class="tech-icon mx-2">
+                </div>
+                <ul class="list-unstyled what-i-do-list text-center">
+                  <li><span class="feature-icon">&#9889;</span> Implementing CI/CD pipelines for ML workflows</li>
+                  <li><span class="feature-icon">&#9889;</span> Orchestrating workflows with Airflow and MLflow</li>
+                  <li><span class="feature-icon">&#9889;</span> Deploying scalable models using Docker</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Cloud -->
+          <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="600">
+            <div class="card skill-card h-100">
+              <div class="card-body">
+                <h4 class="card-title mb-3 text-center">Cloud</h4>
+                <div class="d-flex justify-content-center mb-3 tech-icons">
+                  <img src="icons/streamlit-icon.png" alt="Snowflake Streamlit" class="tech-icon mx-2">
+                  <img src="icons/aws-icon.png" alt="AWS" class="tech-icon mx-2">
+                  <img src="icons/ms-azure-icon_1.png" alt="Azure" class="tech-icon mx-2">  
+                </div>
+                <ul class="list-unstyled what-i-do-list text-center">
+                  <li><span class="feature-icon">&#9889;</span> Building cloud-native applications</li>
+                  <li><span class="feature-icon">&#9889;</span> Deploying solutions on AWS and Azure</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-5">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Work Experience</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Professional journey and achievements</p>
+        
+        <div class="timeline">
+          <!-- Job 1 -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Data Scientist</h3>
+                <span class="company">GradMeet LLC</span>
+                <span class="period">10/2024 – Present</span>
+              </div>
+              <div class="timeline-body">
+                <ul class="experience-list">
+                  <li>Designed and developed a <span class="highlight">FastAPI recommendation system</span> for GradMeet's social media application, deployed it on AWS EC2, driving <span class="highlight">500+ user growth</span> and a <span class="highlight">20% engagement boost</span> via real-time analytics.</li>
+                  <li>Collaborated with marketing and finance teams to design dashboards tracking user behavior, reducing churn by <span class="highlight">15%</span> through A/B testing.</li>
+                  <li>Integrated <span class="highlight">NLP techniques</span> (sentiment analysis, regex) to analyze user feedback, enhancing personalization for around 100 active users.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Job 2 -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Data Scientist</h3>
+                <span class="company">Indiana University</span>
+                <span class="period">09/2023 – 08/2024</span>
+              </div>
+              <div class="timeline-body">
+                <ul class="experience-list">
+                  <li>Led end-to-end genomic research improving spatial genomic data quality using <span class="highlight">NMF & MAGIC</span>, elevating clustering performance by <span class="highlight">18% (Silhouette)</span> and <span class="highlight">68% (Davies-Bouldin)</span>.</li>
+                  <li>Engineered a State of the Art <span class="highlight">Graph Neural Network model</span> predicting drug synergies by integrating 6000 genes and 23,000 drug-cell lines, and training around 1000 parameters—reduced prediction error by 7%, enhancing RMSE.</li>
+                  <li>Automated validation for 15K+ RNA-seq samples, cutting review time by 15%.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Job 3 -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Associate Instructor</h3>
+                <span class="company">Indiana University</span>
+                <span class="period">01/2023 – 05/2023</span>
+              </div>
+              <div class="timeline-body">
+                <ul class="experience-list">
+                  <li>Mentored <span class="highlight">30+ students</span> on machine learning (gene expression analysis, manifold learning), improving class performance by 2% via hands-on workshops and data storytelling techniques.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Job 4 -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Research Data Analyst</h3>
+                <span class="company">Biostatistics Consulting Center, IU</span>
+                <span class="period">08/2022 – 12/2022</span>
+              </div>
+              <div class="timeline-body">
+                <ul class="experience-list">
+                  <li>Analyzed <span class="highlight">35,000+ COVID-19 PCR test records</span>, reducing lab turnaround time by 30% through root-cause analysis of workflow bottlenecks.</li>
+                  <li>Designed a <span class="highlight">Power BI dashboard</span> to track testing accuracy and lab capacity, enabling real-time adjustments that reduced backlog by 40%.</li>
+                  <li>Automated report generation using Python scripts, saving <span class="highlight">10+ hours/week</span> for lab staff.</li>
+                  <li>Validated results via hypothesis testing (ANOVA, t-tests), ensuring 99% confidence in diagnostic improvements.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Education</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Academic background and qualifications</p>
+        
+        <div class="education-cards">
+          <!-- Degree 1 -->
+          <div class="education-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-content">
+              <h3>MS in Data Science</h3>
+              <div class="education-info">
+                <span class="institution">Indiana University</span>
+                <span class="location">Bloomington, IN, USA</span>
+                <span class="period">Aug 2021 - May 2023</span>
+              </div>
+              <!-- <div class="education-details">
+                <p>Specialized in machine learning, statistical analysis, and data visualization techniques.</p>
+              </div> -->
+            </div>
+          </div>
+          
+          <!-- Degree 2 -->
+          <div class="education-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-content">
+              <h3>Post Graduate Diploma in Data Science</h3>
+              <div class="education-info">
+                <span class="institution">IIIT Bangalore</span>
+                <span class="location">Bangalore, India</span>
+                <span class="period">Aug 2020 - Aug 2021</span>
+              </div>
+              <!-- <div class="education-details">
+                <p>Focused on advanced data science methodologies and practical applications.</p>
+              </div> -->
+            </div>
+          </div>
+          
+          <!-- Degree 3 -->
+          <div class="education-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-content">
+              <h3>Bachelor's in Computer Science and Engineering</h3>
+              <div class="education-info">
+                <span class="institution">Symbiosis International University</span>
+                <span class="location">Pune, India</span>
+                <span class="period">Jul 2015 - May 2019</span>
+              </div>
+              <!-- <div class="education-details">
+                <p>Built a strong foundation in computer science principles and software development.</p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Have a Glimpse</p>
+
+        <!-- Dropdown Category Bar -->
+        <div class="category-filter" data-aos="fade-up" data-aos-delay="200">
+          <button class="filter-btn active" data-category="all">All</button>
+          <button class="filter-btn" data-category="data-analysis">Data Analysis</button>
+          <button class="filter-btn" data-category="business-analysis">Business Analysis</button>
+          <button class="filter-btn" data-category="data-scientist-ml">Data Science & ML</button>
+          <button class="filter-btn" data-category="data-engineering">Data Engineering</button>
+          <button class="filter-btn" data-category="genai-llm">GenAI & LLM</button>
+          <button class="filter-btn" data-category="ai-agents">AI Agents</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="row project-grid">
+
+          <!-- Project 1: Arxiv-Multi-Agent-Research-Assistant -->
+          <div class="col-md-4 mb-4 project-card" data-category="ai-agents genai-llm" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 shadow-sm">
+              <div class="project-img-container">
+                <img src="project_images/arxiv-multi-agent.png" class="card-img-top" alt="Reddit Sentiment Analysis">
+                <div class="project-overlay">
+                  <a href="https://github.com/nitanshuj/arxiv_research_assistant.git" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold text-center">
+                  <a href="https://github.com/nitanshuj/arxiv_research_assistant.git" target="_blank" class="text-decoration-none">Arxiv Research Assistant Multi-agent</a>
+                </h5>
+                <div class="d-flex flex-wrap justify-content-center mb-3">
+                  <span class="badge skill-badge m-1">AI Agent</span>
+                  <span class="badge skill-badge m-1">Crew AI</span>
+                  <span class="badge skill-badge m-1">LM Studio</span>
+                  <span class="badge skill-badge m-1">Local LLM</span>
+                  <span class="badge skill-badge m-1">Python</span>
+                  <span class="badge skill-badge m-1">Streamlit</span>
+                </div>
+                <p class="card-text">Desgined a locally hosted LLM based AI-Agent for researching top 
+                                      research papers from Arxiv</p>
+              </div>
+            </div>
+          </div>
 
 
-<!-- ----------------------------------------------------------------------------- -->
+          <!-- Project 1: Reddit Sentinment Analysis -->
+          <div class="col-md-4 mb-4 project-card" data-category="data-engineering data-scientist-ml" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 shadow-sm">
+              <div class="project-img-container">
+                <img src="project_images/reddit-sentiment-analysis.jpg" class="card-img-top" alt="Reddit Sentiment Analysis">
+                <div class="project-overlay">
+                  <a href="https://github.com/nitanshuj/Reddit-Data-Pipelining.git" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold text-center">
+                  <a href="https://github.com/nitanshuj/Reddit-Data-Pipelining.git" target="_blank" class="text-decoration-none">Reddit Sentiment Analysis</a>
+                </h5>
+                <div class="d-flex flex-wrap justify-content-center mb-3">
+                  <span class="badge skill-badge m-1">Data Engineering</span>
+                  <span class="badge skill-badge m-1">NLP</span>
+                  <span class="badge skill-badge m-1">Classification</span>
+                  <span class="badge skill-badge m-1">Data Streaming</span>
+                  <span class="badge skill-badge m-1">Python</span>
+                  <span class="badge skill-badge m-1">Hugging Face</span>
+                </div>
+                <p class="card-text">Designed a pipeline for streaming data from reddit, 
+                                      and then performed a sentiment analysis classification on it</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: RAG App for Chat with PDF -->
+          <div class="col-md-4 mb-4 project-card" data-category="genai-llm" data-aos="fade-up" data-aos-delay="400">
+            <div class="card h-100 shadow-sm">
+              <div class="project-img-container">
+                <img src="project_images/rag-app-icon-1.png" class="card-img-top" alt="RAG App for chat with PDF">
+                <div class="project-overlay">
+                  <a href="https://github.com/nitanshuj/LLM-Based-Chat-with-pdf.git" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold text-center">
+                  <a href="https://github.com/nitanshuj/LLM-Based-Chat-with-pdf.git" target="_blank" class="text-decoration-none">RAG App for chat with PDF</a>
+                </h5>
+                <div class="d-flex flex-wrap justify-content-center mb-3">
+                  <span class="badge skill-badge m-1">Ollama</span>
+                  <span class="badge skill-badge m-1">Streamlit</span>
+                  <span class="badge skill-badge m-1">LLama 3.1</span>
+                  <span class="badge skill-badge m-1">Langchain</span>
+                  <span class="badge skill-badge m-1">Python</span>
+                </div>
+                <p class="card-text">Designed a RAG application for chatting with PDF using Locally hosted LLM using Ollama</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Hospital Rating Improvement -->
+          <div class="col-md-4 mb-4 project-card" data-category="data-scientist-ml data-analysis business-analysis" data-aos="fade-up" data-aos-delay="500">
+            <div class="card h-100 shadow-sm">
+              <div class="project-img-container">
+                <img src="project_images/evanston_hosp.JPG" class="card-img-top" alt="Hospital CMS Rating Improvement">
+                <div class="project-overlay">
+                  <a href="https://github.com/nitanshuj/Healthcare-Suggestions-for-CMS-Rating-Improvement-for-Evanston-Hospital" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold text-center">
+                  <a href="https://github.com/nitanshuj/Healthcare-Suggestions-for-CMS-Rating-Improvement-for-Evanston-Hospital" target="_blank" class="text-decoration-none">Hospital CMS Rating Improvement</a>
+                </h5>
+                <div class="d-flex flex-wrap justify-content-center mb-3">
+                  <span class="badge skill-badge m-1">Business Analysis</span>
+                  <span class="badge skill-badge m-1">Regression</span>
+                  <span class="badge skill-badge m-1">Data Analysis</span>
+                  <span class="badge skill-badge m-1">Data Visualization</span>
+                  <span class="badge skill-badge m-1">Root Cause Analysis</span>
+                </div>
+                <p class="card-text">Analyzed CMS Rating data to perfrom business analysis on the 
+                                      root causes of poor performance and CMS score for a hospital</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Sales Forecasting -->
+          <div class="col-md-4 mb-4 project-card" data-category="data-scientist-ml data-analysis" data-aos="fade-up" data-aos-delay="600">
+            <div class="card h-100 shadow-sm">
+              <div class="project-img-container">
+                <img src="project_images/time_series.jpg" class="card-img-top" alt="Sales Forecasting for Global Mart">
+                <div class="project-overlay">
+                  <a href="https://github.com/nitanshuj/Sales-Forecasting-for-Global-Mart" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold text-center">
+                  <a href="https://github.com/nitanshuj/Sales-Forecasting-for-Global-Mart" target="_blank" class="text-decoration-none">Sales Forecasting for Global Mart</a>
+                </h5>
+                <div class="d-flex flex-wrap justify-content-center mb-3">
+                  <span class="badge skill-badge m-1">Data Analysis</span>
+                  <span class="badge skill-badge m-1">Time Series Forecasting</span>
+                  <span class="badge skill-badge m-1">Data Visualization</span>
+                  <span class="badge skill-badge m-1">Root Cause Analysis</span>
+                  <span class="badge skill-badge m-1">Python</span>
+                </div>
+                <p class="card-text">Forecasted 6-months sales for a retail chain using smoothing and auto-regressive methods, by analyzing time series data</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Credit Card Fraud Detection -->
+          <div class="col-md-4 mb-4 project-card" data-category="data-scientist-ml data-analysis business-analysis" data-aos="fade-up" data-aos-delay="700">
+            <div class="card h-100 shadow-sm">
+              <div class="project-img-container">
+                <img src="project_images/credit-card-fraud-detection.png" class="card-img-top" alt="Credit Card Fraud Detection">
+                <div class="project-overlay">
+                  <a href="https://github.com/nitanshuj/Credit-Card-Fraud-End-to-End.git" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold text-center">
+                  <a href="https://github.com/nitanshuj/Credit-Card-Fraud-End-to-End.git" target="_blank" class="text-decoration-none">Credit Card Fraud Detection</a>
+                </h5>
+                <div class="d-flex flex-wrap justify-content-center mb-3">
+                  <span class="badge skill-badge m-1">Data Analysis</span>
+                  <span class="badge skill-badge m-1">Azure</span>
+                  <span class="badge skill-badge m-1">XGBoost</span>
+                  <span class="badge skill-badge m-1">End-to-End ML</span>
+                  <span class="badge skill-badge m-1">Root Cause Analysis</span>
+                  <span class="badge skill-badge m-1">Python</span>
+                </div>
+                <p class="card-text">Designed and deployed an XGBoost ML Model on Azure, after performing Root cause analysis on the causes of possible Credit Card fraud.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Telecom churn analysis -->
+          <div class="col-md-4 mb-4 project-card" data-category="data-scientist-ml data-analysis business-analysis" data-aos="fade-up" data-aos-delay="700">
+            <div class="card h-100 shadow-sm">
+              <div class="project-img-container">
+                <img src="project_images/telecom-churn-case-study.png" class="card-img-top" alt="Credit Card Fraud Detection">
+                <div class="project-overlay">
+                  <a href="https://github.com/nitanshuj/Churn-Analysis-for-a-Telecom-Company.git" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold text-center">
+                  <a href="https://github.com/nitanshuj/Churn-Analysis-for-a-Telecom-Company.git" target="_blank" class="text-decoration-none">Credit Card Fraud Detection</a>
+                </h5>
+                <div class="d-flex flex-wrap justify-content-center mb-3">
+                  <span class="badge skill-badge m-1">Data Analysis</span>
+                  <span class="badge skill-badge m-1">Logistic Regression</span>
+                  <span class="badge skill-badge m-1">Churn Analysis</span>
+                  <span class="badge skill-badge m-1">Root Cause Analysis</span>
+                  <span class="badge skill-badge m-1">Python</span>
+                </div>
+                <p class="card-text">Designed a ML based analytical technique to identify and predict the causes of churn in the telecom sector</p>
+              </div>
+            </div>
+          </div>
 
 
-<!-- What I Do - 4 Sections -->
-<section id="what-i-do-cards" class="py-5 bg-white">
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------- Active Projects Section -------------------------------------------------- -->
+
+<section id="active-projects" class="py-5">
   <div class="container">
-    <h2 class="text-center mb-5">What I Do</h2>
+    <h2 class="section-title" data-aos="fade-up">Active Projects</h2>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Ongoing projects and contributions</p>
+
+    <!-- Category Filter Buttons for Active Projects
+    <div class="category-filter" data-aos="fade-up" data-aos-delay="200">
+      <button class="filter-btn active" data-active-category="all">All</button>
+      <button class="filter-btn" data-active-category="da">Data Analysis</button>
+      <button class="filter-btn" data-active-category="ba">Business Analysis</button>
+      <button class="filter-btn" data-active-category="ml-ds">Data Science & ML</button>
+      <button class="filter-btn" data-active-category="de">Data Engineering</button>
+      <button class="filter-btn" data-active-category="genai-llm">GenAI & LLM</button>
+      <button class="filter-btn" data-active-category="ai-agent">AI Agents</button>
+    </div> -->
+    
     <div class="row">
-
-      <!-- Card 1: Data Science & AI -->
-      <div class="col-md-6 mb-4">
-        <div class="card shadow-sm h-100">
-          <div class="card-body">
-            <h4 class="text-primary mb-3 text-center">Data Science & ML</h4>
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/icons/tensorflow-icon.png" alt="TensorFlow" class="tech-icon mx-2">
-              <img src="/icons/scikit-learn-icon.png" alt="Scikit-Learn" class="tech-icon mx-2">
-              <img src="/icons/pytorch-icon.png" alt="PyTorch" class="tech-icon mx-2">
-              <img src="/icons/python-icon.jpg" alt="Python" class="tech-icon mx-2">
-              <img src="icons/aws-sagemaker-icon.png" alt="GitLab CI/CD" class="tech-icon mx-2">
+      
+      <!-- Active Project 1 -->
+      <div class="col-lg-4 col-md-6 mb-4 active-project-item" data-active-category="genai-llm ml-ds" data-aos="fade-up" data-aos-delay="200">
+        <div class="active-project-card">
+          <div class="project-header">
+            <h4>Game Hierarchical Genre Classification</h4>
+            <span class="project-stage idea-stage">Idea Stage</span>
+          </div>
+          <div class="project-body">
+            <p>Categorizing & assigning genres & subgenres for video games on Steam, by Fine Tuning Open Source LLMs.</p>
+            <div class="project-progress">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <span class="progress-text">10% Complete</span>
             </div>
-            <ul class="list-unstyled what-i-do-list text-center">
-              <li><span class="text-warning">&#9889;</span> Developing scalable production-ready models</li>
-              <li><span class="text-warning">&#9889;</span> Expertise in Natural Language Processing</li>
-              <li><span class="text-warning">&#9889;</span> Time series analysis and forecasting</li>
-            </ul>
+            <!-- <div class="project-tech">
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">Classification</span>
+              <span class="tech-tag">LLM Fine-tuning</span>
+              <span class="tech-tag">Gen AI</span>
+            </div> -->
           </div>
         </div>
       </div>
-
-      <!-- Card 2: Data Engineering -->
-      <div class="col-md-6 mb-4">
-        <div class="card shadow-sm h-100">
-          <div class="card-body">
-            <h4 class="text-primary mb-3 text-center">Data Engineering</h4>
-            <div class="d-flex justify-content-center mb-3">
-              
-              <img src="/icons/PostgreSQL-Icon.jpg" alt="Postgre SQL" class="tech-icon mx-2">
-              <img src="/icons/snowflake-icon.png" alt="Snowflake" class="tech-icon mx-2">
-              <img src="/icons/amazon-redshift.png" alt="Amazon Redshift" class="tech-icon mx-2">
-              
-              <img src="/icons/apache-spark-icon.png" alt="Apache Spark" class="tech-icon mx-2">
-              
-              <img src="/icons/kafka-icon.png" alt="Kafka" class="tech-icon mx-2">
-            </div>
-            <ul class="list-unstyled what-i-do-list text-center">
-              <li><span class="text-warning">&#9889;</span> Building data pipelines for ETL processes</li>
-              <li><span class="text-warning">&#9889;</span> Expertise in cloud platforms like AWS and Azure</li>
-              <li><span class="text-warning">&#9889;</span> Managing big data with Snowflake and Spark</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3: Data Analysis and Business Analysis -->
-      <div class="col-md-6 mb-4">
-        <div class="card shadow-sm h-100">
-          <div class="card-body">
-            <h4 class="text-primary mb-3 text-center">Data Analysis and Business Analysis</h4>
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/icons/tableau-icon.png" alt="Tableau" class="tech-icon mx-2">
-              <img src="/icons/powerbi-icon.png" alt="Power BI" class="tech-icon mx-2">
-              <img src="/icons/python-icon.jpg" alt="Python" class="tech-icon mx-2">
-              <img src="/icons/excel-icon.png" alt="Excel" class="tech-icon mx-2">
-            </div>
-            <ul class="list-unstyled what-i-do-list text-center">
-              <li><span class="text-warning">&#9889;</span> Creating insightful dashboards with Tableau/Power BI</li>
-              <li><span class="text-warning">&#9889;</span> Conducting statistical analysis for decision-making</li>
-              <li><span class="text-warning">&#9889;</span> Expertise in root cause analysis and A/B testing</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4: LLM and GenAI -->
-      <div class="col-md-6 mb-4">
-        <div class="card shadow-sm h-100">
-          <div class="card-body">
-            <h4 class="text-primary mb-3 text-center">LLM and GenAI</h4>
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/icons/hugging-face-icon.png" alt="Hugging Face" class="tech-icon mx-2">
-              <img src="/icons/langchain-icon.png" alt="Langchain" class="tech-icon mx-2">
-              <img src="/icons/chroma-db-icon.png" alt="Chroma Db" class="tech-icon mx-2">
-              <img src="/icons/langgraph-icon.png" alt="Lang Graph" class="tech-icon mx-2">
-              <img src="/icons/crew-ai-icon.png" alt="Crew AI" class="tech-icon mx-2">
-              
-            </div>
-            <ul class="list-unstyled what-i-do-list text-center">
-              <li><span class="text-warning">&#9889;</span> Fine-tuning LLMs for custom applications</li>
-              <li><span class="text-warning">&#9889;</span> Building generative AI solutions for businesses</li>
-              <li><span class="text-warning">&#9889;</span> Implementing vector search for semantic retrieval</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5: ML OPs and Deployment -->
-      <div class="col-md-6 mb-4">
-        <div class="card shadow-sm h-100">
-          <div class="card-body">
-            <h4 class="text-primary mb-3 text-center">MLOps and CI/CD</h4>
-            <div class="d-flex justify-content-center mb-3">
-              <img src="icons/docker-icon.png" alt="Docker" class="tech-icon mx-2">
-              <img src="icons/git-logo.png" alt="Git" class="tech-icon mx-2"> 
-              <img src="icons/mlflow-icon.png" alt="MLflow" class="tech-icon mx-2">  
-              <img src="icons/apache-airflow-icon.png" alt="Airflow" class="tech-icon mx-2">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 6: Cloud -->
-      <div class="col-md-6 mb-4">
-        <div class="card shadow-sm h-100">
-          <div class="card-body">
-            <h4 class="text-primary mb-3 text-center">Cloud</h4>
-            <div class="d-flex justify-content-center mb-3">
-              <img src="icons/streamlit-icon.png" alt="Snowflake Streamlit" class="tech-icon mx-2">
-              <img src="icons/aws-icon.png" alt="AWS" class="tech-icon mx-2">
-              <img src="icons/ms-azure-icon_1.png" alt="Azure" class="tech-icon mx-2">  
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-    </div>
-
-    <!-- ML Ops Section (Full Width) -->          <!-- ML Ops Section (Full Width) -->
-    <!-- <div id="ml-ops-section" class="">
-      <div class="row">
-        <div class="col-md-12 mb-4">
-          <div class="card shadow-sm h-100">
-            <div class="card-body">
-              <h4 class="text-primary mb-3 text-center">ML Ops</h4>
-              <div class="d-flex justify-content-center mb-3">
-                <img src="docker-icon.png" alt="Docker" class="tech-icon mx-2">
-                <img src="git-logo.png" alt="Git" class="tech-icon mx-2"> -->
-                <!-- <img src="kubernetes-icon.png" alt="Kubernetes" class="tech-icon mx-2"> -->
-                <!-- <img src="apache-airflow-icon.png" alt="Airflow" class="tech-icon mx-2">
-                <img src="mlflow-icon.png" alt="MLflow" class="tech-icon mx-2"> -->
-                <!-- <img src="gitlab-icon.png" alt="GitLab CI/CD" class="tech-icon mx-2"> -->
-              <!-- </div>
-              <ul class="list-unstyled what-i-do-list text-center"> -->
-                <!-- <li><span class="text-warning">&#9889;</span> Implementing CI/CD pipelines for machine learning workflows</li>
-                <li><span class="text-warning">&#9889;</span> Orchestrating workflows with tools like Airflow and MLflow</li>
-                <li><span class="text-warning">&#9889;</span> Deploying scalable models using Docker and Kubernetes</li> -->
-              <!-- </ul>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-
-
-    </div>
-  </section>
-
-
-
-
-
-
-
-
-
- <!-- ----------------------------------------------------------------------------- -->
-
- <section id="projects" class="bg-light-gray">
-  <div class="container">
-    <h2>My Projects</h2>
-    <!-- Center align the below paragraph -->
-    <h4 class="text-center">Have a Glimpse</h4>
-    <br>
-
-    <!-- Dropdown Category Bar -->
-    <div class="dropdown text-center mb-4">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="projectDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Filter by Category
-      </button>
-      <div class="dropdown-menu" aria-labelledby="projectDropdown">
-        <a class="dropdown-item" href="#" data-category="all">All</a>
-        <a class="dropdown-item" href="#" data-category="data-analysis">Data Analysis</a>
-        <a class="dropdown-item" href="#" data-category="business-analysis">Business Analysis</a>
-        <a class="dropdown-item" href="#" data-category="data-scientist-ml">Data Scientist & ML</a>
-        <a class="dropdown-item" href="#" data-category="genai-llm">GenAI & LLM</a>
-        <!-- <a class="dropdown-item" href="#" data-category="ai-agents">AI Agents</a> -->
-      </div>
-    </div>
-
-    <!-- Projects Grid -->
-    <div class="row">
-
-      <div class="col-md-4 mb-4 project-card" data-category="data-engineering data-scientist-ml">
-        <div class="card h-100 shadow-sm">
-          <img src="project_images/reddit-sentiment-analysis.jpg" class="card-img-top" alt="Project 3 Thumbnail">
-          <div class="card-body">
-            <h5 class="card-title font-weight-bold text-center">
-              <a href="https://github.com/nitanshuj/Reddit-Data-Pipelining.git" target="_blank" class="text-decoration-none">Reddit Sentiment Analysis</a>
-            </h5>
-            <div class="d-flex flex-wrap justify-content-center mb-3">  <!-- Skill Tiles -->
-              <span class="badge skill-badge m-1">Data Engineering</span>
-              
-              <span class="badge skill-badge m-1">NLP</span>
-              <span class="badge skill-badge m-1">Classification</span>
-              <span class="badge skill-badge m-1">Data Streaming</span>
-              <span class="badge skill-badge m-1">Python</span>
-            </div>
-            <p class="card-text">Designed a pipeline for streaming data from reddit, 
-                                  and then performed a sentiment analysis classification on it</p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-md-4 mb-4 project-card" data-category="data-scientist-ml genai-llm">
-        <div class="card h-100 shadow-sm">
-          <img src="project_images/rag-app-icon-1.png" class="card-img-top" alt="Project 3 Thumbnail">
-          <div class="card-body">
-            <h5 class="card-title font-weight-bold text-center">
-              <a href="https://github.com/nitanshuj/LLM-Based-Chat-with-pdf.git" target="_blank" class="text-decoration-none">RAG App for chat with PDF</a>
-            </h5>
-            <div class="d-flex flex-wrap justify-content-center mb-3">  <!-- Skill Tiles -->
-              <span class="badge skill-badge m-1">Ollama</span>
-              <span class="badge skill-badge m-1">Streamlit</span>
-              <span class="badge skill-badge m-1">LLama 3.1</span>
-              <span class="badge skill-badge m-1">Langchain</span>
-              <span class="badge skill-badge m-1"></span>
-              <span class="badge skill-badge m-1">Python</span>
-            </div>
-            <p class="card-text">Designed a RAG application for chatting with PDF using Locally hosted LLM using Ollama</p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-md-4 mb-4 project-card" data-category="data-scientist-ml data-analysis business-analysis">
-        <div class="card h-100 shadow-sm">
-          <img src="project_images/evanston_hosp.JPG" class="card-img-top" alt="Project 3 Thumbnail">
-          <div class="card-body">
-            <h5 class="card-title font-weight-bold text-center">
-              <a href="https://github.com/nitanshuj/Healthcare-Suggestions-for-CMS-Rating-Improvement-for-Evanston-Hospital" target="_blank" class="text-decoration-none">Hospital CMS Rating Improvement</a>
-            </h5>
-            <div class="d-flex flex-wrap justify-content-center mb-3">  <!-- Skill Tiles -->
-              <span class="badge skill-badge m-1">Business Analysis</span>
-              <span class="badge skill-badge m-1">Regression</span>
-              <span class="badge skill-badge m-1">Data Analysis</span>
-              <span class="badge skill-badge m-1">Data Visualization</span>
-              <span class="badge skill-badge m-1">Root Cause Analysis</span>
-              <span class="badge skill-badge m-1">Python</span>
-            </div>
-            <p class="card-text">Analyzed CMS Rating data to perfrom business analysis on the 
-                                  root causes of poor performance and CMS score for a hospital</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4 project-card" data-category="data-scientist-ml data-analysis">
-        <div class="card h-100 shadow-sm">
-          <img src="project_images/time_series.jpg" class="card-img-top" alt="Project 3 Thumbnail">
-          <div class="card-body">
-            <h5 class="card-title font-weight-bold text-center">
-              <a href="https://github.com/nitanshuj/Sales-Forecasting-for-Global-Mart" target="_blank" class="text-decoration-none">Sales Forecasting for Global Mart</a>
-            </h5>
-            <div class="d-flex flex-wrap justify-content-center mb-3">  <!-- Skill Tiles -->
-              <span class="badge skill-badge m-1">Data Analysis</span>
-              <span class="badge skill-badge m-1">Time Series Forecasting</span>
-              <span class="badge skill-badge m-1">Data Visualization</span>
-              <span class="badge skill-badge m-1">Root Cause Analysis</span>
-              <span class="badge skill-badge m-1">Python</span>
-            </div>
-            <p class="card-text">Forecasted 6-months sales for a retail chain using smoothing and auto-regressive methods,  
-                                    by analyzing time series data</p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-md-4 mb-4 project-card" data-category="data-scientist-ml data-analysis business-analysis">
-        <div class="card h-100 shadow-sm">
-          <img src="project_images/credit-card-fraud-detection.png" class="card-img-top" alt="Project 3 Thumbnail">
-          <div class="card-body">
-            <h5 class="card-title font-weight-bold text-center">
-              <a href="https://github.com/nitanshuj/Credit-Card-Fraud-End-to-End.git" target="_blank" class="text-decoration-none">Credit Card Fraud Detection</a>
-            </h5>
-            <div class="d-flex flex-wrap justify-content-center mb-3">  <!-- Skill Tiles -->
-              <span class="badge skill-badge m-1">Data Analysis</span>
-              <span class="badge skill-badge m-1">Azure</span>
-              <span class="badge skill-badge m-1">XGBoost</span>
-              <span class="badge skill-badge m-1">End-to-End ML</span>
-              <span class="badge skill-badge m-1">Root Cause Analysis</span>
-              <span class="badge skill-badge m-1">Python</span>
-            </div>
-            <p class="card-text">Designed and deployed an XGBoost ML Model on Azure, 
-                                  after performing Root cause analysis on the causes of possible Credid Card fraud.</p>
-          </div>
-        </div>
-      </div>
-
-
-
+      
 
 
 
     </div>
   </div>
 </section>
+
+
   
+  <!-- ----------------------------------------- Article Sections ----------------------------------------- -->
 
+    <!-- Articles Section -->
+    <section id="articles" class="py-5">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Articles</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Insights and knowledge sharing</p>
+        
+        <div class="row">
+          <!-- Article 1 -->
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="article-card">
+              <div class="article-img"> 
+                
+                <img src="project_images/article_1_my_experiements_with_sleep.jpg" alt="The Future of LLMs in Business">
+                <!-- <div class="article-date">
+                  <span>Apr 10, 2023</span>
+                </div> -->
+              </div>
+              <div class="article-content">
+                <h4>My Experiments with Sleep</h4>
+                <p>Time series analysis of sleep</p>
+                <a href="https://medium.com/@nitanshuj138/my-experiments-with-sleep-a45235c03c06" target="_blank"
+                    class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          
 
-  <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+          
+        </div>
+      </div>
+    </section>
 
-<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <div class="container text-center">
+        <h2 class="section-title" data-aos="fade-up">Contact</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Let's connect and collaborate</p>
+        
+        
+        <div class="social-links" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://www.linkedin.com/in/nitanshu-joshi-ds/" target="_blank" class="social-link">
+            <img src="favicon/LinkedIn_Favicon/apple-touch-icon.png" alt="LinkedIn" width="50" height="50">
+          </a>
+          <a href="https://github.com/nitanshuj" target="_blank" class="social-link">
+            <img src="favicon/Github_Favicon/apple-touch-icon.png" alt="GitHub" width="50" height="50">
+          </a>
+          <a href="https://medium.com/@nitanshuj138" target="_blank" class="social-link">
+            <img src="favicon/Medium_Favicon/apple-touch-icon.png" alt="Medium" width="50" height="50">
+          </a>
+          <a href="mailto:nitanshuj138@gmail.com" target="_blank" class="social-link">
+            <img src="favicon/Mail_Favicon/apple-touch-icon.png" alt="Email" width="50" height="50">
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container text-center">
+        <p>&copy; 2023 Nitanshu Joshi. All rights reserved.</p>
+        <p>Data Scientist | ML Engineer | AI Engineer</p>
+      </div>
+    </footer>
 
-<section id="contact" class="bg-white py-5">
-  <div class="container text-center">
-    <h2 class="mb-4">Contact</h2>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap and jQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
-    <div class="d-flex justify-content-center gap-6">
-
-      <a href="https://www.linkedin.com/in/nitanshu-joshi-ds/" target="_blank" class="text-decoration-none">
-        <img src="favicon/LinkedIn_Favicon/apple-touch-icon.png" alt="LinkedIn" width="50" height="50">
-      </a>
-
-      <a href="https://github.com/nitanshuj" target="_blank" class="text-decoration-none">
-        <img src="favicon/Github_Favicon/apple-touch-icon.png" alt="LinkedIn" width="50" height="50">
-      </a>
-
-      <a href="https://medium.com/@nitanshuj138" target="_blank" class="text-decoration-none">
-        <img src="favicon/Medium_Favicon/apple-touch-icon.png" alt="LinkedIn" width="50" height="50">
-      </a>
-
-      <a href="mailto:nitanshuj138@gmail.com" target="_blank" class="text-decoration-none">
-        <img src="favicon/Mail_Favicon/apple-touch-icon.png" alt="LinkedIn" width="50" height="50">
-      </a>
-
-      
-    </div>
-  </div>
-</section>
-      
-      
-      <!-- Optional Contact Form -->
-      <!-- <form>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Enter your name">
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter your email">
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-      </form>
-    </div>
-  </section> -->
-
-    <!-- Contact Form -->
-    <!-- <form id="contact-form">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-    </form> -->
-      
-
-
-
-<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-
-  <!-- Bootstrap and jQuery Scripts (required for Bootstrap’s JS plugins) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
-
-<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-
-  <!-- Basic Script for Project Filtering -->
-  <script>
-    $(document).ready(function () {
-      // Handle dropdown filter click events
-      $('.dropdown-item').click(function (e) {
-        e.preventDefault();
-        var category = $(this).data('category'); // Get selected category
-  
-        if (category === 'all') {
-          // Show all projects if "All" is selected
-          $('.project-card').show();
-        } else {
-          // Hide all projects and show only those matching the selected category
-          $('.project-card').hide();
-          $('.project-card').filter(function () {
-            return $(this).data('category').includes(category);
-          }).show();
-        }
-      });
-    });
-  </script>
-  
-  <!-- Add EmailJS Script -->
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    // Initialize EmailJS with your User ID
-    (function() {
-      emailjs.init("YOUR_USER_ID"); // Replace with your User ID from EmailJS Dashboard
-    })();
-
-    // Handle form submission
-    document.getElementById("contact-form").addEventListener("submit", function(e) {
-      e.preventDefault(); // Prevent default form submission
-      
-      // Send email using EmailJS
-      emailjs.sendForm(
-        "YOUR_SERVICE_ID", // Replace with your Service ID
-        "YOUR_TEMPLATE_ID", // Replace with your Template ID
-        this // "this" refers to the form element
-      ).then(
-        () => {
-          alert("Message sent successfully! 🎉");
-          document.getElementById("contact-form").reset(); // Clear form fields
-        },
-        (error) => {
-          alert("Oops! Something went wrong. Please try again.");
-          console.error("Error:", error);
-        }
-      );
-    });
-  </script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
+    <!-- Custom Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
