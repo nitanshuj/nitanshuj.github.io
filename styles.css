@@ -183,7 +183,8 @@ section:nth-child(even) {
 /* Hero Section */
 .hero-section {
   height: 100vh;
-  background: linear-gradient(135deg, #4a6bff 0%, #6c63ff 100%);
+  /* background: linear-gradient(135deg, #4a6bff 0%, #6c63ff 100%); */
+  background: linear-gradient(135deg, #34d399 0%, #059669 100%);
   position: relative;
   overflow: hidden;
 }
@@ -372,10 +373,10 @@ section:nth-child(even) {
 }
 
 .tech-icon {
-  width: 40px;
-  height: 40px;
+  width: 80px;  /* Increase from default size */
+  height: 80px; /* Increase from default size */
   object-fit: contain;
-  transition: var(--transition);
+  transition: transform 0.3s ease;
 }
 
 .tech-icon:hover {
