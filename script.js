@@ -183,4 +183,69 @@ document.addEventListener("DOMContentLoaded", () => {
       this.style.transform = "translateY(0)"
     })
   })
+
+  // Education and Experience Timeline Animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in')
+      }
+    })
+  }, observerOptions)
+
+  // Observe education and experience items
+  document.querySelectorAll('.education-item, .experience-card').forEach(item => {
+    observer.observe(item)
+  })
+
+  // Add smooth hover effects for timeline items
+  document.querySelectorAll('.education-content, .experience-card .card-content').forEach(item => {
+    item.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-10px) scale(1.02)'
+    })
+    
+    item.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0) scale(1)'
+    })
+  })
+
+  // Add parallax effect to timeline dots and icons
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset
+    const timelineDots = document.querySelectorAll('.education-dot, .timeline-dot')
+    const timelineIcons = document.querySelectorAll('.education-icon, .company-icon')
+    
+    timelineDots.forEach((dot, index) => {
+      const speed = (index + 1) * 0.05
+      dot.style.transform = `translateX(-50%) translateY(${scrolled * speed}px)`
+    })
+    
+    timelineIcons.forEach((icon, index) => {
+      const speed = (index + 1) * 0.03
+      icon.style.transform = `translateX(-50%) translateY(${scrolled * speed}px)`
+    })
+  })
+
+  // Enhanced navigation for education and experience sections
+  const navLinks = document.querySelectorAll('.nav-link[href^="#"]')
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault()
+      const targetId = this.getAttribute('href')
+      const targetSection = document.querySelector(targetId)
+      
+      if (targetSection) {
+        const offsetTop = targetSection.offsetTop - 80 // Account for fixed navbar
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        })
+      }
+    })
+  })
 })

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitanshu Joshi - Resume</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .resume-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .resume-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
+        }
+        
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            border: 5px solid rgba(255,255,255,0.2);
+            object-fit: cover;
+        }
+        
+        .resume-content {
+            padding: 2rem;
+        }
+        
+        .section-title {
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .skill-category h5 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 0.2rem;
+        }
+        
+        .timeline-item {
+            border-left: 3px solid #667eea;
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #667eea;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .contact-item i {
+            margin-right: 0.5rem;
+            width: 20px;
+        }
+        
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .achievement-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .achievement-number {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        @media print {
+            .print-btn, .navbar { display: none; }
+            .resume-container { box-shadow: none; }
+            body { background: white; }
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+        
+        .animated-bg {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <!-- Navigation
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: rgba(0,0,0,0.8);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Nitanshu Joshi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+    
+    <!-- Back Button -->
+    <a href="index.html" class="btn btn-primary back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+    
+    <!-- Print Button -->
+    <button onclick="window.print()" class="btn btn-success print-btn">
+        <i class="fas fa-print"></i> Print Resume
+    </button>
+
+    <div class="container py-5">
+        <div class="resume-container" data-aos="fade-up">
+            <!-- Header Section -->
+            <div class="resume-header animated-bg">
+                <img src="potraits/Nitanshu_Joshi_3.jpg" alt="Nitanshu Joshi" class="profile-photo">
+                <h1 class="mb-2">Nitanshu Joshi</h1>
+                <h3 class="mb-3">Data Scientist | Machine Learning Engineer | AI Engineer</h3>
+                <p class="lead">Transforming business problems into AI-based applications</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:nitanshuj138.us@gmail.com" style="color: rgba(255,255,255,0.9); text-decoration: none;">nitanshuj138.us@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(+91) 9286163890</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/nitanshu-joshi-ds" target="_blank" style="color: rgba(255,255,255,0.9); text-decoration: none;">linkedin.com/in/nitanshu-joshi-ds</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/nitanshuj" target="_blank" style="color: rgba(255,255,255,0.9); text-decoration: none;">github.com/nitanshuj</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <a href="https://nitanshuj.github.io" target="_blank" style="color: rgba(255,255,255,0.9); text-decoration: none;">nitanshuj.github.io</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-medium"></i>
+                        <a href="https://medium.com/@nitanshuj138" target="_blank" style="color: rgba(255,255,255,0.9); text-decoration: none;">medium.com/@nitanshuj138</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-content">
+                <!-- Professional Summary -->
+                <section class="mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="section-title">
+                        <i class="fas fa-user"></i> Professional Summary
+                    </h2>
+                    <p class="lead">
+                        Data Scientist with 2 years of experience deploying LLM/NLP apps, building vector-search recommendations, 
+                        and partnering with stakeholders to deliver RAG, AI agents, and AWS ML solutions reducing churn by 15%.
+                    </p>
+                </section>
+
+                <!-- Key Achievements -->
+                <section class="mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <h2 class="section-title">
+                        <i class="fas fa-trophy"></i> Key Achievements
+                    </h2>
+                    <div class="achievements-grid">
+                        <div class="achievement-card">
+                            <span class="achievement-number">500+</span>
+                            <span>New User Acquisitions</span>
+                        </div>
+                        <div class="achievement-card">
+                            <span class="achievement-number">20%</span>
+                            <span>Engagement Boost</span>
+                        </div>
+                        <div class="achievement-card">
+                            <span class="achievement-number">30%</span>
+                            <span>Turnaround Time Reduction</span>
+                        </div>
+                        <div class="achievement-card">
+                            <span class="achievement-number">95%</span>
+                            <span>Fraud Detection Recall</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technical Skills -->
+                <section class="mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <h2 class="section-title">
+                        <i class="fas fa-code"></i> Technical Skills
+                    </h2>
+                    <div class="skill-grid">
+                        <div class="skill-category">
+                            <h5><i class="fas fa-code"></i> Languages</h5>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">PySpark</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">PyTorch</span>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h5><i class="fas fa-tools"></i> Tools & Technologies</h5>
+                            <span class="skill-tag">Hugging Face</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Tableau</span>
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">MS Excel</span>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h5><i class="fas fa-cloud"></i> Cloud & Deployment</h5>
+                            <span class="skill-tag">AWS EC2</span>
+                            <span class="skill-tag">AWS ECS</span>
+                            <span class="skill-tag">AWS Lambda</span>
+                            <span class="skill-tag">AWS SageMaker</span>
+                            <span class="skill-tag">AWS Bedrock</span>
+                            <span class="skill-tag">MS Azure</span>
+                            <span class="skill-tag">Streamlit</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">CI/CD</span>
+                            <span class="skill-tag">MLOps</span>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h5><i class="fas fa-brain"></i> Machine Learning</h5>
+                            <span class="skill-tag">Regression</span>
+                            <span class="skill-tag">Classification</span>
+                            <span class="skill-tag">Clustering</span>
+                            <span class="skill-tag">Deep Neural Networks</span>
+                            <span class="skill-tag">Random Forest</span>
+                            <span class="skill-tag">XGBoost</span>
+                            <span class="skill-tag">NLP</span>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h5><i class="fas fa-chart-line"></i> Statistical & Analytical</h5>
+                            <span class="skill-tag">Predictive Modelling</span>
+                            <span class="skill-tag">Statistical Analysis</span>
+                            <span class="skill-tag">Time Series Forecasting</span>
+                            <span class="skill-tag">A/B Testing</span>
+                            <span class="skill-tag">Data Mining</span>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h5><i class="fas fa-database"></i> Data Engineering</h5>
+                            <span class="skill-tag">Spark</span>
+                            <span class="skill-tag">Airflow</span>
+                            <span class="skill-tag">Kafka</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">ETL</span>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h5><i class="fas fa-robot"></i> GenAI</h5>
+                            <span class="skill-tag">MCP</span>
+                            <span class="skill-tag">LLM</span>
+                            <span class="skill-tag">LLM Fine Tuning</span>
+                            <span class="skill-tag">LORA</span>
+                            <span class="skill-tag">QLORA</span>
+                            <span class="skill-tag">PEFT</span>
+                            <span class="skill-tag">AI Agents</span>
+                            <span class="skill-tag">Quantization</span>
+                            <span class="skill-tag">LangChain</span>
+                            <span class="skill-tag">LangGraph</span>
+                            <span class="skill-tag">CrewAI</span>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h5><i class="fas fa-business-time"></i> Other Skills</h5>
+                            <span class="skill-tag">Business Analysis</span>
+                            <span class="skill-tag">Root Cause Analysis</span>
+                            <span class="skill-tag">Issue Tree Framework</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Work Experience -->
+                <section class="mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <h2 class="section-title">
+                        <i class="fas fa-briefcase"></i> Work Experience
+                    </h2>
+                    
+                    <div class="timeline-item">
+                        <h4>Data Scientist</h4>
+                        <h6 class="text-muted">GradMeet LLC | Oct 2024 – May 2025</h6>
+                        <ul>
+                            <li>Launched a Vector Search driven recommendation engine on AWS EC2, driving 500+ new user acquisitions and boosting engagement by 20% through data-driven personalization</li>
+                            <li>Boosted satisfaction for 100+ users by integrating NLP-driven sentiment analysis and regex into feedback processing, enhancing personalized experiences</li>
+                            <li>Built an internal RAG system to organize documents and enable fast, accurate retrieval</li>
+                            <li>Partnered with Marketing and Finance teams to validate growth strategies using A/B testing and root cause analysis, directly supporting business objectives</li>
+                            <li>Productionized analytics with AWS/Docker/CI/CD, improving reliability and time-to-insight for iterative experiments</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>Data Scientist</h4>
+                        <h6 class="text-muted">Indiana University Bloomington | Sep 2023 – Aug 2024</h6>
+                        <ul>
+                            <li>Enhanced spatial genomic data, increasing cluster quality by 18% (Silhouette) and 68% (Davies-Bouldin) using advanced statistical methods</li>
+                            <li>Engineered a cutting-edge Graph Neural Network that integrated 6,000 genes and 23,000 drug–cell line pairs via Feed Forward Network, slashing prediction error (RMSE) by 7% and boosting model explainability (R-squared) by 2%</li>
+                            <li>Streamlined validation workflows for 15,000+ RNA-seq samples, reducing manual review time by 15% and accelerating three concurrent lab research projects</li>
+                            <li>Translated complex 2D gene patterns into actionable insights and presented key findings to stakeholders, supporting data-driven decision-making in biomedical research</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>Associate Instructor</h4>
+                        <h6 class="text-muted">Indiana University Bloomington | Jan 2023 – May 2023</h6>
+                        <ul>
+                            <li>Mentored 30+ students in machine learning workshops, resulting in a 2% average performance improvement across participants</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>Research Data Analyst</h4>
+                        <h6 class="text-muted">Biostatistics Consulting Center, Indiana University Bloomington | Aug 2022 – Dec 2022</h6>
+                        <ul>
+                            <li>Spearheaded analysis of 35,000+ COVID-19 PCR test records, pinpointing and remedying process bottlenecks to slash lab turnaround time by 30%</li>
+                            <li>Built Power BI dashboards for real-time test tracking, cutting testing backlogs by 40% and saving over 10 staff hours weekly with Python automation</li>
+                            <li>Ensured 99% diagnostic accuracy by rigorously validating laboratory processes with ANOVA and t-tests, ensuring reliable results for critical healthcare decisions</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section class="mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <h2 class="section-title">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </h2>
+                    
+                    <div class="timeline-item">
+                        <h4>MS in Data Science</h4>
+                        <h6 class="text-muted">Indiana University, Bloomington, IN, USA | May 2023</h6>
+                        <!-- <p>Specialized in Machine Learning, Statistical Modeling, and Big Data Analytics</p> -->
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>Post Graduate Diploma in Data Science</h4>
+                        <h6 class="text-muted">IIIT Bangalore, India | Aug 2021</h6>
+                        <!-- <p>Focus on Applied Statistics and Business Analytics</p> -->
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>Bachelor's in Computer Science</h4>
+                        <h6 class="text-muted">Symbiosis International University, Pune, India | May 2019</h6>
+                        <!-- <p>Foundation in Software Development and Algorithms</p> -->
+                    </div>
+                </section>
+
+                <!-- Featured Projects -->
+                <section class="mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <h2 class="section-title">
+                        <i class="fas fa-project-diagram"></i> Featured Projects
+                    </h2>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">ArXiv Multi-Agent Research Assistant</h5>
+                                    <p class="card-text">AI-powered system for researching top papers using CrewAI and LangChain</p>
+                                    <div>
+                                        <span class="skill-tag">CrewAI</span>
+                                        <span class="skill-tag">LangChain</span>
+                                        <span class="skill-tag">Python</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Real-time Sentiment Analysis Pipeline</h5>
+                                    <p class="card-text">Streaming data pipeline for Reddit sentiment analysis using Kafka and Spark</p>
+                                    <div>
+                                        <span class="skill-tag">Kafka</span>
+                                        <span class="skill-tag">Spark</span>
+                                        <span class="skill-tag">NLP</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Credit Card Fraud Detection</h5>
+                                    <p class="card-text">XGBoost model deployed on Azure with 95% accuracy</p>
+                                    <div>
+                                        <span class="skill-tag">XGBoost</span>
+                                        <span class="skill-tag">Azure</span>
+                                        <span class="skill-tag">ML</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">RAG Chat Application</h5>
+                                    <p class="card-text">PDF chat application using locally hosted LLMs and ChromaDB</p>
+                                    <div>
+                                        <span class="skill-tag">RAG</span>
+                                        <span class="skill-tag">ChromaDB</span>
+                                        <span class="skill-tag">Ollama</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Certifications -->
+                <section class="mb-4" data-aos="fade-up" data-aos-delay="700">
+                    <h2 class="section-title">
+                        <i class="fas fa-certificate"></i> Certifications & Publications
+                    </h2>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between;">
+                            <span><strong>Data Camp - Associate AI Engineer for Developers</strong></span>
+                            <span style="background: linear-gradient(135deg, #ffa726, #ff9800); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                                <i class="fas fa-clock" style="margin-right: 5px;"></i>In Progress
+                            </span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between;">
+                            <span><strong>AWS AI Practitioner</strong></span>
+                            <span style="background: linear-gradient(135deg, #ffa726, #ff9800); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                                <i class="fas fa-clock" style="margin-right: 5px;"></i>In Progress
+                            </span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between;">
+                            <span><strong>Published Article:</strong> <a href="https://medium.com/@nitanshuj138/a-multi-agent-system-to-find-top-innovative-arxiv-papers-2a440709f832" target="_blank" style="color: #667eea; text-decoration: none;">"A Multi-Agent System for ArXiv Research"</a> - Medium</span>
+                            <span style="background: linear-gradient(135deg, #4caf50, #388e3c); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                                <i class="fas fa-check-circle" style="margin-right: 5px;"></i>Published
+                            </span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between;">
+                            <span><strong>Published Article:</strong> <a href="https://medium.com/@nitanshuj138/my-experiments-with-sleep-a45235c03c06" target="_blank" style="color: #667eea; text-decoration: none;">"My Experiments with Sleep"</a> - Time Series Analysis</span>
+                            <span style="background: linear-gradient(135deg, #4caf50, #388e3c); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">
+                                <i class="fas fa-check-circle" style="margin-right: 5px;"></i>Published
+                            </span>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and jQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
