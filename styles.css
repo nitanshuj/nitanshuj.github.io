@@ -124,13 +124,85 @@ section:nth-child(even) {
   width: 100%;
 }
 
+/* Theme Switch Toggle */
+.theme-switch {
+  display: inline-block;
+  height: 28px;
+  position: relative;
+  width: 50px;
+  margin-bottom: 0;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.theme-switch .slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.theme-switch .slider:before {
+  background-color: #fff;
+  bottom: 3px;
+  content: "";
+  height: 22px;
+  left: 3px;
+  position: absolute;
+  transition: 0.4s;
+  width: 22px;
+  z-index: 2;
+}
+
+.theme-switch input:checked+.slider {
+  background-color: var(--primary-color);
+}
+
+.theme-switch input:checked+.slider:before {
+  transform: translateX(22px);
+}
+
+.theme-switch .slider.round {
+  border-radius: 34px;
+}
+
+.theme-switch .slider.round:before {
+  border-radius: 50%;
+}
+
+.theme-switch .toggle-icon-sun {
+  color: #f39c12;
+  font-size: 12px;
+  z-index: 1;
+}
+
+.theme-switch .toggle-icon-moon {
+  color: #f1c40f;
+  font-size: 12px;
+  z-index: 1;
+}
+
 /* Hero Section */
 .hero-section {
   height: 100vh;
+  min-height: 600px;
   background: linear-gradient(135deg, #4a6bff 0%, #6c63ff 100%);
-  /* background: linear-gradient(135deg, #34d399 0%, #059669 100%); */
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .hero-section::before {
@@ -140,7 +212,7 @@ section:nth-child(even) {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("/placeholder.svg?height=800&width=1600") center / cover no-repeat;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
   opacity: 0.1;
 }
 
@@ -168,16 +240,19 @@ section:nth-child(even) {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
 }
 
 @keyframes blink-caret {
+
   from,
   to {
     border-color: transparent;
   }
+
   50% {
     border-color: #fff;
   }
@@ -235,6 +310,7 @@ section:nth-child(even) {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -242,9 +318,11 @@ section:nth-child(even) {
   100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-20px);
   }
+
   60% {
     transform: translateY(-10px);
   }
@@ -317,8 +395,10 @@ section:nth-child(even) {
 }
 
 .tech-icon {
-  width: 80px;  /* Increase from default size */
-  height: 80px; /* Increase from default size */
+  width: 80px;
+  /* Increase from default size */
+  height: 80px;
+  /* Increase from default size */
   object-fit: contain;
   transition: transform 0.3s ease;
 }
@@ -634,109 +714,6 @@ section:nth-child(even) {
   transform: translateX(5px);
 }
 
-/* Work Experience Timeline */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-
-.timeline::after {
-  content: "";
-  position: absolute;
-  width: 3px;
-  background: var(--primary-color);
-  top: 0;
-  bottom: 0;
-  left: 50px;
-  margin-left: -1.5px;
-}
-
-.timeline-item {
-  padding: 10px 40px 10px 70px;
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.timeline-dot {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 40px;
-  background-color: var(--primary-color);
-  border: 4px solid var(--bg-color);
-  border-radius: 50%;
-  z-index: 1;
-  box-shadow: 0 0 0 3px rgba(74, 107, 255, 0.2);
-}
-
-.timeline-content {
-  background-color: var(--card-bg);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
-}
-
-.timeline-content:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--hover-shadow);
-}
-
-.timeline-header {
-  margin-bottom: 15px;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 10px;
-}
-
-.timeline-header h3 {
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 5px;
-  font-size: 1.3rem;
-}
-
-.company {
-  display: block;
-  font-weight: 500;
-  color: var(--text-color);
-  margin-bottom: 5px;
-}
-
-.period {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--text-color);
-  opacity: 0.8;
-}
-
-.experience-list {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.experience-list li {
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
-.experience-list li::before {
-  content: "•";
-  color: var(--accent-color);
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.highlight {
-  color: var(--primary-color);
-  font-weight: 500;
-}
-
 /* Education Section */
 .education-cards {
   display: flex;
@@ -955,7 +932,7 @@ section:nth-child(even) {
     align-items: flex-start;
     gap: 10px;
   }
-  
+
   .cert-status {
     align-self: flex-end;
   }
@@ -1104,6 +1081,7 @@ section:nth-child(even) {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1205,254 +1183,151 @@ section:nth-child(even) {
   }
 }
 
-/* Education Section Styles */
-.education-timeline {
+/* Unified Timeline Styles */
+.timeline-section {
   position: relative;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 
-.education-timeline .timeline-line {
+.timeline-container {
+  position: relative;
+}
+
+/* Base line */
+.timeline-line-base {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   width: 4px;
   height: 100%;
-  background: linear-gradient(to bottom, var(--primary-color), rgba(106, 99, 255, 0.5));
+  background: var(--border-color);
   border-radius: 2px;
+  z-index: 1;
 }
 
-.education-item {
+/* Animated fill line */
+.timeline-line-fill {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 0;
+  /* JS will fill this */
+  background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+  z-index: 2;
+  box-shadow: 0 0 15px var(--primary-color);
+  transition: height 0.1s ease-out;
+}
+
+.timeline-item {
   position: relative;
   margin-bottom: 4rem;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.education-item:nth-child(odd) .education-content {
-  margin-left: 0;
-  margin-right: 50%;
+/* Alternating layout */
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-content-wrapper {
+  width: calc(50% - 40px);
+}
+
+.timeline-item:nth-child(odd) .timeline-content-wrapper {
   padding-right: 3rem;
   text-align: right;
 }
 
-.education-item:nth-child(even) .education-content {
-  margin-left: 50%;
-  margin-right: 0;
+.timeline-item:nth-child(even) .timeline-content-wrapper {
   padding-left: 3rem;
   text-align: left;
 }
 
-.education-content {
-  background: var(--card-bg);
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: var(--shadow);
-  position: relative;
-  transition: var(--transition);
-  border: 1px solid var(--border-color);
+/* Bullet alignment for right-aligned text */
+.timeline-item:nth-child(odd) .achievements-list li {
+  padding-left: 0;
+  padding-right: 2rem;
 }
 
-.education-content:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--hover-shadow);
+.timeline-item:nth-child(odd) .achievements-list li::before {
+  left: auto;
+  right: 0;
 }
 
-.education-dot {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 20px;
-  background: var(--bg-color);
-  border-radius: 50%;
-  border: 4px solid var(--primary-color);
-  top: 2rem;
-  z-index: 2;
-}
-
-.education-icon {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 1rem;
-  z-index: 3;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  box-shadow: var(--shadow);
-}
-
-.degree-title {
-  color: var(--primary-color);
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.institution {
-  color: var(--text-color);
-  font-weight: 500;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.period {
-  color: var(--text-color);
-  opacity: 0.8;
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-
-.description {
-  color: var(--text-color);
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.gpa-score {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  display: inline-block;
-  margin-top: 1rem;
-  font-weight: 600;
-}
-
-.coursework {
-  margin-top: 1rem;
-}
-
-.course-tag {
-  background: var(--section-bg);
-  color: var(--text-color);
-  padding: 0.3rem 0.8rem;
-  border-radius: 15px;
-  font-size: 0.85rem;
-  margin: 0.2rem;
-  display: inline-block;
-  border: 1px solid var(--border-color);
-}
-
-/* Experience Section Styles */
-.experience-timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 0;
-}
-
-.experience-timeline .timeline-container {
-  position: relative;
-}
-
-.experience-timeline .timeline-line {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(to bottom, var(--accent-color), rgba(255, 107, 107, 0.3));
-  border-radius: 2px;
-}
-
-.experience-card {
-  position: relative;
-  margin-bottom: 4rem;
-  width: 100%;
-}
-
-.experience-card:nth-child(odd) .card-content {
-  margin-left: 0;
-  margin-right: 52%;
-  text-align: right;
-}
-
-.experience-card:nth-child(even) .card-content {
-  margin-left: 52%;
-  margin-right: 0;
-  text-align: left;
-}
-
-.experience-card .card-content {
+.timeline-content {
   background: var(--card-bg);
   padding: 2.5rem;
   border-radius: 20px;
   box-shadow: var(--shadow);
   position: relative;
-  transition: var(--transition);
-  border: 2px solid transparent;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
-.experience-card .card-content:hover {
+.timeline-content:hover {
   transform: translateY(-10px);
-  box-shadow: var(--hover-shadow);
-  border-color: var(--accent-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-color: var(--primary-color);
 }
 
-.experience-timeline .timeline-dot {
+.timeline-icon-wrapper {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 24px;
-  height: 24px;
-  background: var(--accent-color);
-  border-radius: 50%;
-  border: 4px solid var(--bg-color);
-  top: 2rem;
   z-index: 3;
-  box-shadow: var(--shadow);
 }
 
-.company-icon {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 1rem;
-  z-index: 4;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
+.timeline-icon {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   border: 4px solid var(--bg-color);
-  box-shadow: var(--shadow);
+  box-shadow: 0 0 0 4px rgba(74, 107, 255, 0.2);
+  transition: var(--transition);
 }
 
-.job-title {
+.timeline-item:hover .timeline-icon {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px var(--primary-color);
+}
+
+/* Timeline Text Formatting */
+.item-title {
   color: var(--primary-color);
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-.company-name {
+.item-subtitle {
   color: var(--secondary-color);
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
-.job-period {
+.item-period {
   color: var(--text-color);
   opacity: 0.8;
   font-style: italic;
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
-.job-description {
+.item-description {
   color: var(--text-color);
   line-height: 1.7;
   margin-bottom: 1.5rem;
@@ -1477,13 +1352,13 @@ section:nth-child(even) {
   top: 0;
 }
 
-.tech-stack {
+.coursework {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
-  border-top: 2px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
 }
 
-.tech-tag {
+.item-tag {
   display: inline-block;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
@@ -1494,83 +1369,54 @@ section:nth-child(even) {
   font-weight: 500;
 }
 
-/* Mobile Responsive Styles for Education and Experience */
-@media (max-width: 768px) {
-  .education-timeline .timeline-line,
-  .experience-timeline .timeline-line {
-    left: 2rem;
-  }
-  
-  .education-item:nth-child(odd) .education-content,
-  .education-item:nth-child(even) .education-content {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 4rem;
-    padding-right: 1rem;
-    text-align: left;
-  }
-  
-  .experience-card:nth-child(odd) .card-content,
-  .experience-card:nth-child(even) .card-content {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 4rem;
-    text-align: left;
-  }
-  
-  .education-dot,
-  .education-icon,
-  .experience-timeline .timeline-dot,
-  .company-icon {
-    left: 2rem;
-    transform: translateX(-50%);
-  }
-}
-
-/* Animation Classes for Timeline Items */
-.education-item,
-.experience-card {
+/* Animations */
+.timeline-item {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.6s ease;
 }
 
-.education-item.animate-in,
-.experience-card.animate-in {
+.timeline-item.animate-in {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Enhanced hover effects */
-.education-content,
-.experience-card .card-content {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Mobile Breakpoints */
+@media (max-width: 768px) {
 
-.education-content:hover,
-.experience-card .card-content:hover {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
+  .timeline-line-base,
+  .timeline-line-fill {
+    left: 2rem;
+  }
 
-/* Timeline line animation */
-.timeline-line {
-  position: relative;
-  overflow: hidden;
-}
+  .timeline-item,
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 
-.timeline-line::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background: inherit;
-  animation: timeline-grow 2s ease-in-out forwards;
-}
+  .timeline-content-wrapper,
+  .timeline-item:nth-child(odd) .timeline-content-wrapper,
+  .timeline-item:nth-child(even) .timeline-content-wrapper {
+    width: calc(100% - 4rem);
+    padding: 0;
+    text-align: left;
+  }
 
-@keyframes timeline-grow {
-  to {
-    height: 100%;
+  .timeline-icon-wrapper {
+    left: 2rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .timeline-item:nth-child(odd) .achievements-list li {
+    padding-left: 2rem;
+    padding-right: 0;
+  }
+
+  .timeline-item:nth-child(odd) .achievements-list li::before {
+    left: 0;
+    right: auto;
   }
 }
