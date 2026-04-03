@@ -107,4 +107,38 @@ const filteredProjects = computed(() => {
   font-weight: 600;
   border: 1px solid var(--border-color);
 }
+
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.filter-btn {
+  background: var(--glass-bg);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 8px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.filter-btn:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-color);
+}
+
+.filter-btn.active {
+  background: var(--primary-gradient);
+  color: #fff !important;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+}
 </style>

@@ -113,7 +113,10 @@ export const experience = [
     location: 'Bangalore, India',
     period: 'November 2025 – Present',
     description: '',
-    achievements: [],
+    achievements: [
+      'Developed and maintained 4 enterprise-scale AI & ML models on Palantir Foundry.',
+      'Optimized AI RAG-based models to significantly reduce LLM token usage and improve query efficiency.'
+    ],
     tags: ['Python', 'Palantir Foundry', 'Document Search', 'NLP', 'MS Azure']
   },
   {
@@ -173,7 +176,6 @@ export const education = [
     institution: 'Indiana University',
     location: 'Bloomington, IN, USA',
     period: 'Aug 2021 - May 2023',
-    description: 'Comprehensive program focusing on advanced statistical modeling, machine learning algorithms, and big data analytics.',
     coursework: ['Advanced Machine Learning', 'Deep Learning', 'Statistical Modeling', 'Big Data Analytics', 'Data Mining', 'Bayesian Methods', 'Time Series Analysis', 'Natural Language Processing']
   },
   {
@@ -181,7 +183,6 @@ export const education = [
     institution: 'IIIT Bangalore',
     location: 'India',
     period: 'Aug 2020 - Aug 2021',
-    description: 'Intensive industry-focused program designed to bridge the gap between academic knowledge and practical applications.',
     coursework: ['Business Analytics', 'Predictive Modeling', 'Data Visualization', 'Applied Statistics', 'Market Research', 'Operations Research']
   },
   {
@@ -189,7 +190,6 @@ export const education = [
     institution: 'Symbiosis International University',
     location: 'Pune, India',
     period: 'May 2019',
-    description: 'Comprehensive undergraduate program providing strong foundation in computer science fundamentals.',
     coursework: ['Artificial Intelligence', 'Data Structures & Algorithms', 'Database Management', 'Software Engineering']
   }
 ]

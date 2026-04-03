@@ -30,19 +30,41 @@ body {
 }
 
 .dark-mode {
-  --primary-color: #7b95ff;
-  --primary-gradient: linear-gradient(135deg, #7b95ff 0%, #a29bfe 100%);
-  --secondary-color: #a29bfe;
-  --accent-color: #ff8e8e;
-  --text-color: #f1f2f6;
-  --bg-color: #0f172a;
-  --card-bg: #1e293b;
-  --section-bg: #111827;
-  --border-color: #334155;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  --hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-  --glass-bg: rgba(15, 23, 42, 0.8);
-  --glass-border: rgba(255, 255, 255, 0.05);
+  --primary-color: #00d4ff;
+  --primary-gradient: linear-gradient(135deg, #00d4ff 0%, #005cff 100%);
+  --secondary-color: #005cff;
+  --accent-color: #ff0055;
+  --text-color: #e2e8f0;
+  --bg-color: #050814;
+  --card-bg: #0b1120;
+  --section-bg: #080c19;
+  --border-color: rgba(0, 212, 255, 0.15);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --hover-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
+  --glass-bg: rgba(11, 17, 32, 0.8);
+  --glass-border: rgba(0, 212, 255, 0.2);
+}
+
+body.dark-mode .text-muted,
+body.dark-mode .text-dark,
+body.dark-mode p.lead.text-justify {
+  color: var(--text-color) !important;
+  opacity: 0.85 !important;
+}
+
+/* Force dark backgrounds on components to override Bootstrap defaults globally */
+body.dark-mode .card,
+body.dark-mode .project-card {
+  background: var(--card-bg) !important;
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-color) !important;
+}
+
+body.dark-mode .card:hover,
+body.dark-mode .project-card:hover {
+  box-shadow: var(--hover-shadow) !important;
+  border-color: var(--primary-color) !important;
 }
 
 /* Custom Scrollbar */
@@ -321,6 +343,7 @@ section:nth-child(even) {
 /* Cards & Components */
 .card {
   background: var(--card-bg);
+  color: var(--text-color);
   border: 1px solid var(--border-color);
   border-radius: 20px;
   box-shadow: var(--shadow);
@@ -428,6 +451,10 @@ section:nth-child(even) {
   text-align: right;
 }
 
+.timeline-left .item-description {
+  text-align: left;
+}
+
 .timeline-right .timeline-content-wrapper {
   text-align: left;
 }
@@ -510,13 +537,6 @@ section:nth-child(even) {
   list-style: none;
   padding: 0;
   margin-top: 15px;
-}
-
-.timeline-left .achievements-list {
-  text-align: right;
-}
-
-.timeline-right .achievements-list {
   text-align: left;
 }
 
@@ -528,10 +548,7 @@ section:nth-child(even) {
   font-size: 0.95rem;
 }
 
-.timeline-left .achievements-list li {
-  padding-left: 0;
-  padding-right: 25px;
-}
+
 
 .achievements-list li::before {
   content: '\f058'; /* FontAwesome check-circle */
@@ -543,10 +560,7 @@ section:nth-child(even) {
   color: var(--primary-color);
 }
 
-.timeline-left .achievements-list li::before {
-  left: auto;
-  right: 0;
-}
+
 
 /* Responsive Timeline */
 @media (max-width: 768px) {
@@ -575,10 +589,47 @@ section:nth-child(even) {
   }
   .timeline-left .achievements-list li {
     padding-left: 25px;
-    padding-right: 0;
   }
-  .timeline-left .achievements-list li::before {
-    left: 0;
-    right: auto;
-  }
+}
+
+/* Deep visibility overrides for Dark Mode */
+body.dark-mode, 
+body.dark-mode p, 
+body.dark-mode span, 
+body.dark-mode li, 
+body.dark-mode div, 
+body.dark-mode .company-name, 
+body.dark-mode .date,
+body.dark-mode .education-details,
+body.dark-mode .article-excerpt,
+body.dark-mode .item-description {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .item-period {
+    color: var(--text-color) !important;
+    background: var(--card-bg) !important;
+}
+
+body.dark-mode .card-title,
+body.dark-mode .card-title a,
+body.dark-mode .article-card h5,
+body.dark-mode .item-title { 
+    color: var(--primary-color) !important; 
+}
+
+body.dark-mode .card-text { 
+    color: var(--text-color) !important; 
+    opacity: 0.85; 
+}
+
+body.dark-mode .btn-outline-custom { 
+    color: var(--primary-color) !important; 
+    border-color: var(--primary-color) !important; 
+}
+
+body.dark-mode .filter-btn:not(.active) { 
+    background: var(--card-bg) !important; 
+    color: var(--text-color) !important; 
+    border-color: var(--border-color) !important;
 }
