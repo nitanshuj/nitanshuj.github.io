@@ -13,7 +13,7 @@
             v-for="(job, index) in experienceList" 
             :key="index" 
             class="timeline-item" 
-            :class="{ 'animate-in': job.visible }"
+            :class="[{ 'animate-in': job.visible }, index % 2 === 0 ? 'timeline-left' : 'timeline-right']"
             v-observe-visibility="{
               callback: (isVisible) => job.visible = isVisible,
               once: true

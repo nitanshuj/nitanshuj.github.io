@@ -13,6 +13,7 @@
             v-for="(edu, index) in educationList" 
             :key="index" 
             class="timeline-item" 
+            :class="index % 2 === 0 ? 'timeline-left' : 'timeline-right'"
             data-aos="fade-up"
             :data-aos-delay="200 + index * 100"
           >
