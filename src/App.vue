@@ -26,6 +26,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useTheme } from './composables/useTheme.js'
 import Navbar from './components/Navbar.vue'
 import Hero from './components/Hero.vue'
 import About from './components/About.vue'
@@ -52,6 +53,8 @@ const scrollToTop = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+  const { initTheme } = useTheme()
+  initTheme()
 })
 
 onUnmounted(() => {

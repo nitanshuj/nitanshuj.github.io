@@ -11,38 +11,86 @@ body {
   transition: var(--transition);
 }
 
-/* Light/Dark Mode Variables */
-:root {
-  --primary-color: #4a6bff;
-  --primary-gradient: linear-gradient(135deg, #4a6bff 0%, #6c63ff 100%);
-  --secondary-color: #6c63ff;
-  --accent-color: #ff6b6b;
-  --text-color: #333;
-  --bg-color: #ffffff;
-  --card-bg: #ffffff;
-  --section-bg: #f8f9fa;
-  --border-color: #e9ecef;
+/* Light/Dark Mode Variables & Theme Tokens */
+:root, [data-theme="graphite-teal"] {
+  /* Graphite Teal - Light Base Theme */
+  --bg-color: #F6FAF9;
+  --card-bg: #FFFFFF;
+  --text-color: #0F172A;
+  --primary-color: #0F766E;
+  --secondary-color: #2563EB;
+  --accent-color: #0d9488;
+  --primary-gradient: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  --section-bg: #Eef4f3;
+  --border-color: #E2E8F0;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   --hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   --glass-bg: rgba(255, 255, 255, 0.8);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  
+  /* Accessible Chart Palette */
+  --chart-series-1: #3B82F6;
+  --chart-series-2: #F59E0B;
+  --chart-series-3: #14B8A6;
+  --chart-neutral: #94A3B8;
+}
+
+[data-theme="slate-cyan"] {
+  /* Slate Cyan - Dark Base Theme */
+  --bg-color: #121212;
+  --card-bg: #1B1F24;
+  --text-color: #E5E7EB;
+  --primary-color: #22C7D6;
+  --secondary-color: #64748B;
+  --accent-color: #0ea5e9;
+  --primary-gradient: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  --section-bg: #181C20;
+  --border-color: rgba(34, 199, 214, 0.15);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --hover-shadow: 0 15px 40px rgba(34, 199, 214, 0.2);
+  --glass-bg: rgba(27, 31, 36, 0.8);
+  --glass-border: rgba(34, 199, 214, 0.2);
+  
+  /* Accessible Chart Palette */
+  --chart-series-1: #3B82F6;
+  --chart-series-2: #F59E0B;
+  --chart-series-3: #14B8A6;
+  --chart-neutral: #94A3B8;
+}
+
+[data-theme="cvd-safe"] {
+  /* CVD Safe Light - Accessible Flat Theme */
+  --bg-color: #F8FAFC;
+  --card-bg: #FFFFFF;
+  --text-color: #0F172A;
+  --primary-color: #2563EB;
+  --secondary-color: #D97706;
+  --accent-color: #0F766E;
+  
+  /* No gradients for accessibility */
+  --primary-gradient: var(--primary-color);
+  
+  --section-bg: #EEF2F7;
+  --border-color: #CBD5E1;
+  
+  /* Flat shadows or simple borders instead of deep blends */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --hover-shadow: 0 10px 15px rgba(37, 99, 235, 0.1);
+  
+  /* Solid fallback for glassmorphism */
+  --glass-bg: #FFFFFF;
+  --glass-border: #CBD5E1;
+  
+  /* Accessible Chart Palette */
+  --chart-series-1: #2563EB;
+  --chart-series-2: #D97706;
+  --chart-series-3: #0F766E;
+  --chart-neutral: #94A3B8;
 }
 
 .dark-mode {
-  --primary-color: #00d4ff;
-  --primary-gradient: linear-gradient(135deg, #00d4ff 0%, #005cff 100%);
-  --secondary-color: #005cff;
-  --accent-color: #ff0055;
-  --text-color: #e2e8f0;
-  --bg-color: #050814;
-  --card-bg: #0b1120;
-  --section-bg: #080c19;
-  --border-color: rgba(0, 212, 255, 0.15);
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  --hover-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
-  --glass-bg: rgba(11, 17, 32, 0.8);
-  --glass-border: rgba(0, 212, 255, 0.2);
+  /* Keep empty or minimalist to not break older references */
 }
 
 body.dark-mode .text-muted,

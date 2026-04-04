@@ -137,8 +137,8 @@ const filteredProjects = computed(() => {
 
 .filter-btn.active {
   background: var(--primary-gradient);
-  color: #fff !important;
+  color: #ffffff !important; /* Kept white for contrast against primary gradient across all themes */
   border-color: transparent;
-  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 4px 15px var(--hover-shadow);
 }
 </style>
