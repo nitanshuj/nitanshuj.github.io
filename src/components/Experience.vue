@@ -14,6 +14,7 @@
             <span class="muted">{{ job.period }}</span>
             <h3 class="mt-4">{{ job.company }}</h3>
             <p class="role">{{ job.title }}</p>
+            <p class="location muted" style="font-size: 0.9rem; margin-top: 4px;">{{ job.location }}</p>
           </div>
           <div class="item-details">
             <ul class="achievements">
