@@ -16,7 +16,7 @@
       </div>
 
       <div class="card-grid">
-        <div 
+        <article 
           v-for="(project, index) in filteredProjects" 
           :key="project.id" 
           class="minimal-card"
@@ -37,7 +37,7 @@
               <a :href="project.github" target="_blank" class="text-link">{{ projectLinkLabel(project.github) }} &rarr;</a>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>

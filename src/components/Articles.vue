@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">Published Articles</h2>
       <div class="card-grid">
-        <div 
+        <article 
           v-for="(article, index) in articlesList" 
           :key="index" 
           class="minimal-card"
@@ -21,7 +21,7 @@
               <a :href="article.link" target="_blank" class="text-link">Read Full Post &rarr;</a>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>

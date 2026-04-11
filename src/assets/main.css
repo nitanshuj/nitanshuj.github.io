@@ -150,9 +150,11 @@ h1, h2, h3, h4 {
 .mb-4 { margin-bottom: 1.5rem; }
 
 @media (max-width: 768px) {
-  .display-1 { font-size: 3.5rem; }
-  .display-2 { font-size: 2.5rem; }
+  .display-1 { font-size: 3rem; }
+  .display-2 { font-size: 2.25rem; }
+  .section-title { font-size: 2.25rem; margin-bottom: 30px; }
   .container { padding: 0 24px; }
   section { padding: 80px 0; }
-  .hero-content { grid-column: span 12; }
+  .grid-layout { grid-template-columns: 1fr; }
+  .hero-content { grid-column: 1 / -1; }
 }

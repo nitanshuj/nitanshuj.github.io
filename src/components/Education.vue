@@ -73,7 +73,7 @@ import { education } from '../data.js'
 
 @media (max-width: 768px) {
   .item-meta, .item-details {
-    grid-column: span 12;
+    grid-column: 1 / -1;
   }
   .item-details {
     margin-top: 24px;
