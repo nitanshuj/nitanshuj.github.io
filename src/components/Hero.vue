@@ -2,7 +2,7 @@
   <section class="hero-section">
     <div class="container">
       <div class="grid-layout">
-        <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="500">
           <h1 class="display-1">Nitanshu<br>Joshi</h1>
           <p class="hero-subtitle">
             Data Scientist & AI Engineer. <br>
