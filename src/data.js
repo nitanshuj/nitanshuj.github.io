@@ -100,7 +100,7 @@ export const articles = [
   },
   {
     title: 'My Experiments with Sleep',
-    image: '/project_images/article_1_my_experiments_with_sleep.jpg',
+    image: '/project_images/article_1_my_experiements_with_sleep.jpg',
     link: 'https://medium.com/@nitanshuj138/my-experiments-with-sleep-a45235c03c06',
     description: 'Time series analysis of sleep'
   }

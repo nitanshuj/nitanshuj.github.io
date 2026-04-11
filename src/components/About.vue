@@ -5,7 +5,7 @@
       <div class="row align-items-center">
         <div class="col-md-5 text-center" data-aos="fade-right" data-aos-delay="200">
           <div class="profile-img-container">
-            <img src="/portraits/Nitanshu_Joshi_4.jpg" alt="Nitanshu Joshi Profile" class="big-square-img">
+            <img src="/portraits/Nitanshu_Joshi_5.jpg" alt="Nitanshu Joshi Profile" class="big-square-img">
           </div>
         </div>
         <div class="col-md-7" data-aos="fade-left" data-aos-delay="300">
