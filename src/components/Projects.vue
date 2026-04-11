@@ -34,7 +34,7 @@
               <div class="badge-row mb-4">
                 <span v-for="badge in project.badges.slice(0, 3)" :key="badge" class="badge-mini">{{ badge }}</span>
               </div>
-              <a :href="project.github" target="_blank" class="text-link">View Project &rarr;</a>
+              <a :href="project.github" target="_blank" class="text-link">{{ projectLinkLabel(project.github) }} &rarr;</a>
             </div>
           </div>
         </div>
@@ -61,6 +61,11 @@ const filteredProjects = computed(() => {
   if (activeCategory.value === 'all') return projects
   return projects.filter(p => p.categories.includes(activeCategory.value))
 })
+
+const projectLinkLabel = (url) => {
+  if (url && url.includes('github.com')) return 'View GitHub Code'
+  return 'View Project'
+}
 </script>
 
 <style scoped>
