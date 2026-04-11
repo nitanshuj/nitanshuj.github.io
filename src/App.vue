@@ -26,7 +26,6 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import { useTheme } from './composables/useTheme.js'
 import Navbar from './components/Navbar.vue'
 import Hero from './components/Hero.vue'
 import About from './components/About.vue'
@@ -53,8 +52,6 @@ const scrollToTop = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
-  const { initTheme } = useTheme()
-  initTheme()
 })
 
 onUnmounted(() => {
@@ -65,32 +62,25 @@ onUnmounted(() => {
 <style>
 .back-to-top {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 40px;
+  right: 40px;
   width: 50px;
   height: 50px;
-  background: var(--primary-gradient);
-  color: white;
-  border-radius: 50%;
+  background: var(--text-color);
+  color: var(--bg-color);
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
-  box-shadow: var(--shadow);
   opacity: 0;
   visibility: hidden;
-  transition: 0.3s;
+  transition: var(--transition);
   z-index: 1000;
   cursor: pointer;
 }
 
-.back-to-top.active {
-  opacity: 1;
-  visibility: visible;
-}
-
 .back-to-top:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--hover-shadow);
+  opacity: 0.7;
 }
 </style>

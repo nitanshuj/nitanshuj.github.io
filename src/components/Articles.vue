@@ -1,21 +1,24 @@
 <template>
-  <section id="articles" class="py-5">
+  <section id="articles">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Articles</h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Insights and knowledge sharing.</p>
-
-      <div class="row">
-        <div v-for="(article, index) in articlesList" :key="index" class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" :data-aos-delay="200 + index * 100">
-          <div class="article-card h-100">
-            <div class="article-img">
-              <img :src="article.image" :alt="article.title">
-            </div>
-            <div class="article-content text-center">
-              <h4>{{ article.title }}</h4>
-              <p class="text-muted">{{ article.description }}</p>
-              <a :href="article.link" target="_blank" class="read-more">
-                Read Article <i class="fas fa-arrow-right"></i>
-              </a>
+      <h2 class="section-title" data-aos="fade-up">Published Articles</h2>
+      <div class="card-grid">
+        <div 
+          v-for="(article, index) in articlesList" 
+          :key="index" 
+          class="minimal-card"
+          data-aos="fade-up"
+          :data-aos-delay="index * 80"
+        >
+          <div class="card-image-wrapper">
+            <img :src="article.image" :alt="article.title" class="card-image" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Article</span>
+            <h3 class="mb-4">{{ article.title }}</h3>
+            <p class="muted mb-4">{{ article.description }}</p>
+            <div class="card-footer mt-4">
+              <a :href="article.link" target="_blank" class="text-link">Read Full Post &rarr;</a>
             </div>
           </div>
         </div>
@@ -29,46 +32,75 @@ import { articles as articlesList } from '../data.js'
 </script>
 
 <style scoped>
-.article-card {
-  border-radius: 20px;
-  background: var(--card-bg);
-  box-shadow: var(--shadow);
-  transition: var(--transition);
+/* Override card-grid to have narrower columns */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1px;
+  border: 1px solid var(--border-color);
+}
+
+.minimal-card {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.minimal-card:hover {
+  background-color: transparent;
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 180px;
   overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
 }
-.article-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--hover-shadow);
-}
-.article-img {
-  height: 200px;
-  overflow: hidden;
-}
-.article-img img {
+
+.card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.3s;
+  transition: transform 0.5s ease;
+  filter: grayscale(40%);
 }
-.article-card:hover .article-img img {
-  transform: scale(1.1);
+
+.minimal-card:hover .card-image {
+  transform: scale(1.04);
+  filter: grayscale(0%);
 }
-.article-content {
-  padding: 25px;
+
+.card-body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
-.article-content h4 {
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-.read-more {
-  color: var(--primary-color);
-  font-weight: 600;
+
+.text-link {
   text-decoration: none;
-  transition: 0.3s;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--text-color);
+  padding-bottom: 2px;
+  display: inline-block;
+  transition: opacity 0.3s;
 }
-.read-more:hover {
-  color: var(--secondary-color);
-  padding-left: 5px;
+
+.text-link:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

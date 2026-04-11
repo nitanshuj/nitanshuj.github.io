@@ -1,39 +1,69 @@
 <template>
   <section class="hero-section">
-    <div class="hero-bg-accent"></div>
-    <div class="hero-bg-accent-2"></div>
-    <div class="container text-center">
-      <div data-aos="fade-up" data-aos-duration="1000">
-        <h1 class="display-3 mb-4">Nitanshu <span class="highlight">Joshi</span></h1>
-        <h3 class="mb-4">
-          <span ref="typeTarget"></span>
-        </h3>
-        <p class="lead mb-5">Transforming business problems into AI-based applications</p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
-          <a href="#contact" class="btn btn-outline-custom btn-lg">Contact Me</a>
+    <div class="container">
+      <div class="grid-layout">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+          <h1 class="display-1">Nitanshu<br>Joshi</h1>
+          <p class="hero-subtitle">
+            Data Scientist & AI Engineer. <br>
+            Transforming business problems into AI-based applications.
+          </p>
+          <div class="hero-cta mt-4">
+            <a href="#projects" class="nav-link">View Projects &rarr;</a>
+          </div>
         </div>
-      </div>
-      <div class="scroll-down">
-        <a href="#about"><i class="fas fa-chevron-down"></i></a>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
-import Typed from 'typed.js'
-
-const typeTarget = ref(null)
+import { onMounted } from 'vue'
 
 onMounted(() => {
-  new Typed(typeTarget.value, {
-    strings: ['Data Scientist', 'Machine Learning Engineer', 'AI Engineer'],
-    typeSpeed: 100,
-    backSpeed: 50,
-    backDelay: 2000,
-    loop: true
-  })
+  // AOS is already initialized in main.js
 })
 </script>
+
+<style scoped>
+.hero-content {
+  grid-column: 1 / span 8;
+}
+
+.display-1 {
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.hero-cta {
+  font-size: 1.1rem;
+}
+
+.hero-cta a {
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-color);
+  letter-spacing: 0.05em;
+  padding: 10px 0;
+  border-bottom: 2px solid var(--text-color);
+  transition: opacity 0.3s;
+}
+
+.hero-cta a:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    grid-column: 1 / span 12;
+  }
+}
+</style>

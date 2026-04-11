@@ -1,10 +1,15 @@
 <template>
-  <footer class="footer py-5 mt-5">
-    <div class="container text-center">
-      <p class="mb-2">© 2024 Nitanshu Joshi. All rights reserved.</p>
-      <p class="mb-4">Data Scientist | ML Engineer | AI Engineer</p>
-      <div class="footer-links">
-        <a href="https://cloudyphotography.netlify.app/" target="_blank">Photography Portfolio</a>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid grid-layout">
+        <div class="footer-left">
+          <p class="muted">&copy; 2024 Nitanshu Joshi</p>
+        </div>
+        <div class="footer-right">
+          <div class="footer-links">
+            <a href="https://cloudyphotography.netlify.app/" target="_blank" class="muted">Photography Portfolio &rarr;</a>
+          </div>
+        </div>
       </div>
     </div>
   </footer>
@@ -12,22 +17,37 @@
 
 <style scoped>
 .footer {
-  background: var(--section-bg);
-  color: var(--text-color);
+  padding: 60px 0;
   border-top: 1px solid var(--border-color);
 }
-.footer p {
-  opacity: 0.8;
-  font-weight: 500;
+
+.footer-left {
+  grid-column: span 6;
 }
+
+.footer-right {
+  grid-column: span 6;
+  text-align: right;
+}
+
 .footer-links a {
-  color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
-  transition: 0.3s;
+  font-size: 0.9rem;
+  transition: color 0.3s;
 }
+
 .footer-links a:hover {
-  opacity: 0.8;
-  text-decoration: underline;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .footer-left, .footer-right {
+    grid-column: span 12;
+    text-align: left;
+  }
+  .footer-right {
+    margin-top: 24px;
+  }
 }
 </style>

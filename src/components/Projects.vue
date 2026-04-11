@@ -1,10 +1,9 @@
 <template>
-  <section id="projects" class="py-5">
+  <section id="projects">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">My Projects</h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">A collection of my work in Data Science, ML, and AI.</p>
-
-      <div class="category-filter mb-5" data-aos="fade-up" data-aos-delay="200">
+      <h2 class="section-title" data-aos="fade-up">Selected Work</h2>
+      
+      <div class="category-filter mb-4" data-aos="fade-up">
         <button 
           v-for="cat in allCategories" 
           :key="cat.id" 
@@ -16,29 +15,26 @@
         </button>
       </div>
 
-      <div class="row project-grid">
+      <div class="card-grid">
         <div 
           v-for="(project, index) in filteredProjects" 
           :key="project.id" 
-          class="col-md-6 col-lg-4 mb-4" 
+          class="minimal-card"
           data-aos="fade-up" 
-          :data-aos-delay="300 + (index % 3) * 100"
+          :data-aos-delay="index * 80"
         >
-          <div class="card h-100 project-card">
-            <div class="project-img-container">
-              <img :src="project.image" class="card-img-top" :alt="project.title">
-              <div class="project-overlay">
-                <a :href="project.github" target="_blank" class="btn btn-primary">View Project</a>
+          <div class="card-image-wrapper">
+            <img :src="project.image" :alt="project.title" class="card-image" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <span class="card-tag">{{ project.categories[0].replace(/-/g, ' ') }}</span>
+            <h3 class="mb-4">{{ project.title }}</h3>
+            <p class="muted mb-4">{{ project.description }}</p>
+            <div class="card-footer mt-4">
+              <div class="badge-row mb-4">
+                <span v-for="badge in project.badges.slice(0, 3)" :key="badge" class="badge-mini">{{ badge }}</span>
               </div>
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title font-weight-bold text-center">
-                <a :href="project.github" target="_blank" class="text-decoration-none">{{ project.title }}</a>
-              </h5>
-              <div class="d-flex flex-wrap justify-content-center mb-3">
-                <span v-for="badge in project.badges" :key="badge" class="badge skill-badge m-1">{{ badge }}</span>
-              </div>
-              <p class="card-text text-muted">{{ project.description }}</p>
+              <a :href="project.github" target="_blank" class="text-link">View Project &rarr;</a>
             </div>
           </div>
         </div>
@@ -57,10 +53,8 @@ const allCategories = [
   { id: 'all', label: 'All' },
   { id: 'ai-agents', label: 'AI Agents' },
   { id: 'genai-llm', label: 'GenAI & LLM' },
-  { id: 'data-scientist-ml', label: 'Data Science & ML' },
-  { id: 'data-engineering', label: 'Data Engineering' },
-  { id: 'data-analysis', label: 'Data Analysis' },
-  { id: 'business-analysis', label: 'Business Analysis' }
+  { id: 'data-scientist-ml', label: 'ML' },
+  { id: 'data-engineering', label: 'Engineering' }
 ]
 
 const filteredProjects = computed(() => {
@@ -70,75 +64,115 @@ const filteredProjects = computed(() => {
 </script>
 
 <style scoped>
-.project-card {
-  border-radius: 20px;
-  overflow: hidden;
-  transition: var(--transition);
-}
-.project-img-container {
-  height: 220px;
-  overflow: hidden;
-  position: relative;
-}
-.project-img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.project-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: 0.3s;
-}
-.project-card:hover .project-overlay {
-  opacity: 1;
-}
-.skill-badge {
-  background: var(--section-bg);
-  color: var(--primary-color);
-  font-weight: 600;
-  border: 1px solid var(--border-color);
-}
-
 .category-filter {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 20px;
 }
 
 .filter-btn {
-  background: var(--glass-bg);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  color: var(--text-color);
+  background: none;
   border: 1px solid var(--border-color);
-  padding: 8px 22px;
-  border-radius: 30px;
+  color: var(--text-color);
+  padding: 8px 16px;
+  font-size: 0.8rem;
   font-weight: 600;
-  font-size: 0.9rem;
+  text-transform: uppercase;
   cursor: pointer;
   transition: var(--transition);
-  box-shadow: var(--shadow);
+  white-space: nowrap;
+  font-family: var(--font-main);
 }
 
-.filter-btn:hover {
-  transform: translateY(-3px);
-  border-color: var(--primary-color);
+.filter-btn:hover, .filter-btn.active {
+  background-color: var(--text-color);
+  color: var(--bg-color);
 }
 
-.filter-btn.active {
-  background: var(--primary-gradient);
-  color: #ffffff !important; /* Kept white for contrast against primary gradient across all themes */
-  border-color: transparent;
-  box-shadow: 0 4px 15px var(--hover-shadow);
+/* Override card-grid from global to be 3-col for projects */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1px;
+  border: 1px solid var(--border-color);
+}
+
+.minimal-card {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.minimal-card:hover {
+  background-color: transparent;
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: grayscale(40%);
+}
+
+.minimal-card:hover .card-image {
+  transform: scale(1.04);
+  filter: grayscale(0%);
+}
+
+.card-body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge-mini {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  padding: 2px 8px;
+}
+
+.text-link {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--text-color);
+  padding-bottom: 2px;
+  display: inline-block;
+  transition: opacity 0.3s;
+}
+
+.text-link:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

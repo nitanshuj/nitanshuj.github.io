@@ -1,41 +1,24 @@
 <template>
-  <section id="education" class="py-5">
+  <section id="education">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Education</h2>
-      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Academic journey that shaped my expertise.</p>
-
-      <div class="timeline-section">
-        <div class="timeline-container">
-          <div class="timeline-line-base"></div>
-          <div class="timeline-line-fill" :style="{ height: scrollProgress + '%' }"></div>
-
-          <div 
-            v-for="(edu, index) in educationList" 
-            :key="index" 
-            class="timeline-item" 
-            :class="index % 2 === 0 ? 'timeline-left' : 'timeline-right'"
-            data-aos="fade-up"
-            :data-aos-delay="200 + index * 100"
-          >
-            <div class="timeline-icon-wrapper">
-              <div class="timeline-icon">
-                <i class="fas fa-graduation-cap"></i>
-              </div>
-            </div>
-            <div class="timeline-content-wrapper">
-              <div class="timeline-content">
-                <div class="item-title">{{ edu.degree }}</div>
-                <div class="item-subtitle">{{ edu.institution }}</div>
-                <div class="item-period">{{ edu.period }} | {{ edu.location }}</div>
-                <div class="item-description">
-                  {{ edu.description }}
-                </div>
-
-                <div class="coursework mt-3">
-                  <strong>Key Coursework:</strong><br>
-                  <span v-for="course in edu.coursework" :key="course" class="item-tag">{{ course }}</span>
-                </div>
-              </div>
+      <h2 class="section-title" data-aos="fade-up">Academia</h2>
+      <div class="education-list">
+        <div 
+          v-for="(edu, index) in education" 
+          :key="index" 
+          class="education-item grid-layout"
+          data-aos="fade-up"
+          :data-aos-delay="index * 100"
+        >
+          <div class="item-meta">
+            <span class="muted">{{ edu.period }}</span>
+            <h3 class="mt-4">{{ edu.institution }}</h3>
+            <p class="degree">{{ edu.degree }}</p>
+          </div>
+          <div class="item-details">
+            <p class="description mb-4">{{ edu.description }}</p>
+            <div class="coursework">
+              <span v-for="course in edu.coursework" :key="course" class="tag-mini">{{ course }}</span>
             </div>
           </div>
         </div>
@@ -45,47 +28,55 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-import { education as educationList } from '../data.js'
-
-const scrollProgress = ref(0)
-
-const updateProgress = () => {
-  const section = document.getElementById('education')
-  if (!section) return
-  
-  const rect = section.getBoundingClientRect()
-  const viewportHeight = window.innerHeight
-  const startPoint = rect.top - (viewportHeight * 0.5)
-  const totalHeight = rect.height
-  
-  let progress = -startPoint / totalHeight
-  progress = Math.max(0, Math.min(1, progress))
-  scrollProgress.value = progress * 100
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', updateProgress)
-  updateProgress()
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', updateProgress)
-})
+import { education } from '../data.js'
 </script>
 
 <style scoped>
-.coursework strong {
-  display: block;
-  margin-bottom: 10px;
+.education-item {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--border-color);
 }
-.item-tag {
-  background: var(--primary-gradient);
-  color: white;
-  padding: 5px 12px;
-  border-radius: 20px;
+
+.education-item:last-child {
+  border-bottom: none;
+}
+
+.item-meta {
+  grid-column: span 4;
+}
+
+.item-details {
+  grid-column: span 8;
+}
+
+.degree {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+.description {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.tag-mini {
   font-size: 0.75rem;
-  margin: 3px;
+  font-weight: 600;
+  color: var(--text-color);
+  background-color: var(--border-color);
+  padding: 4px 10px;
+  margin-right: 8px;
+  margin-bottom: 8px;
   display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .item-meta, .item-details {
+    grid-column: span 12;
+  }
+  .item-details {
+    margin-top: 24px;
+  }
 }
 </style>

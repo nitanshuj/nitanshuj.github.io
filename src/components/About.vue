@@ -1,29 +1,27 @@
 <template>
-  <section id="about" class="section-padding">
+  <section id="about">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">About Me</h2>
-      <div class="row align-items-center">
-        <div class="col-md-5 text-center" data-aos="fade-right" data-aos-delay="200">
-          <div class="profile-img-container">
-            <img src="/portraits/Nitanshu_Joshi_5.jpg" alt="Nitanshu Joshi Profile" class="big-square-img">
+      <div class="grid-layout">
+        <div class="about-text" data-aos="fade-up">
+          <h2 class="section-title">Background</h2>
+          <p class="display-2 mb-4">
+            Building scalable ML solutions <span class="muted">at the intersection of industry and research.</span>
+          </p>
+          <div class="about-description">
+            <p class="muted mb-4">
+              Results-driven Data Scientist with 2 years of experience building scalable ML solutions. 
+              I specialize in deploying recommendation systems and predictive models that boost user growth and retention.
+            </p>
+            <p class="muted">
+              Expert in real-time analytics, NLP, and cloud infrastructure (AWS/Azure). 
+              My passion lies in transforming raw data into actionable business intelligence through Python, SQL, and advanced statistics.
+            </p>
           </div>
         </div>
-        <div class="col-md-7" data-aos="fade-left" data-aos-delay="300">
-          <p class="lead text-justify mb-4">
-            <span class="highlight-text">Results-driven</span> Data Scientist with 
-            <span class="highlight-text">2 years experience</span> 
-            building <span class="highlight-text">scalable ML solutions</span> in industry and academia.
-          </p>
-          <p class="lead text-justify mb-4">
-            Deployed <span class="highlight-text">recommendation systems</span> and 
-            <span class="highlight-text">predictive models</span> to boost <span class="highlight-text">user growth</span> and <span class="highlight-text">retention</span>.
-          </p>
-          <p class="lead text-justify mb-4">
-            Skilled in <span class="highlight-text">real-time analytics, NLP, AWS, Azure</span>; expert at transforming data into <span class="highlight-text">actionable insights</span>.
-          </p>
-          <p class="lead text-justify mb-4">
-            Proficient in <span class="highlight-text">Python, SQL, Power BI, Tableau</span> and advanced statistics, with a passion for <span class="highlight-text">continuous learning</span>.
-          </p>
+        <div class="about-image" data-aos="fade-up" data-aos-delay="200">
+          <div class="image-wrapper">
+            <img src="/portraits/Nitanshu_Joshi_5.jpg" alt="Nitanshu Joshi">
+          </div>
         </div>
       </div>
     </div>
@@ -31,22 +29,53 @@
 </template>
 
 <style scoped>
-.highlight-text {
-  color: var(--primary-color);
-  font-weight: 600;
+.about-text {
+  grid-column: span 8;
 }
-.profile-img-container {
-  position: relative;
-  display: inline-block;
-  padding: 10px;
-  background: var(--primary-gradient);
-  border-radius: 30px;
-  box-shadow: var(--shadow);
+
+.about-image {
+  grid-column: span 4;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
-.big-square-img {
+
+.image-wrapper {
   width: 100%;
-  max-width: 350px;
-  border-radius: 20px;
-  display: block;
+  max-width: 300px;
+  filter: grayscale(100%);
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+}
+
+.image-wrapper:hover {
+  filter: grayscale(0%);
+}
+
+.image-wrapper img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.about-description {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-text, .about-image {
+    grid-column: span 12;
+  }
+  .about-image {
+    order: -1;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+  }
+  .display-2 {
+    font-size: 2rem;
+  }
 }
 </style>
