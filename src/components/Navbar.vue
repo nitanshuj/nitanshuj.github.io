@@ -5,8 +5,10 @@
       
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#projects">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#articles">Articles</a>
         <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
     </div>

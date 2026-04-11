@@ -11,6 +11,9 @@
           <div class="hero-cta mt-4">
             <a href="#projects" class="nav-link">View Projects &rarr;</a>
           </div>
+          <div class="hero-cta mt-2">
+            <a href="#articles" class="nav-link">View Articles &rarr;</a>
+          </div>
         </div>
       </div>
     </div>
