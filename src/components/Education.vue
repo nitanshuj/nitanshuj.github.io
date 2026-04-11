@@ -14,6 +14,7 @@
             <span class="muted">{{ edu.period }}</span>
             <h3 class="mt-4">{{ edu.institution }}</h3>
             <p class="degree">{{ edu.degree }}</p>
+            <p class="location muted" style="font-size: 0.9rem; margin-top: 4px;">{{ edu.location }}</p>
           </div>
           <div class="item-details">
             <p class="description mb-4">{{ edu.description }}</p>
