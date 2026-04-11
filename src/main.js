@@ -15,10 +15,10 @@ import 'aos/dist/aos.css'
 
 // Initialize AOS
 AOS.init({
-  duration: 300,
+  duration: 500,
   easing: 'ease-out-cubic',
   once: true,
-  offset: 30
+  offset: 50
 })
 
 createApp(App).mount('#app')
