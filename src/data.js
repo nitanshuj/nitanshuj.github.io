@@ -75,6 +75,12 @@ export const projects = [
 
 export const articles = [
   {
+    title: 'Talk Smarter to Claude: A Practical Guide to Prompting Better Within Limits',
+    image: '/project_images/article_6_talk Smarter_to_Claude.png',
+    link: '#',
+    description: 'How a few simple habits can stretch your Claude sessions further than you thought possible.'
+  },
+  {
     title: '10 Interesting MLOps Interview Questions for ML Engineers',
     image: '/project_images/article_5.png',
     link: 'https://medium.com/@nitanshuj138/10-interesting-mlops-interview-questions-for-ml-engineers-eb2c1f9329ae',
