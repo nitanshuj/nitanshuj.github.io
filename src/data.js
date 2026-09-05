@@ -120,8 +120,9 @@ export const experience = [
     period: 'November 2025 – Present',
     description: '',
     achievements: [
-      'Developed and maintained 4 enterprise-scale AI & ML models on Palantir Foundry.',
-      'Optimized AI RAG-based models to significantly reduce LLM token usage and improve query efficiency.'
+      'Owned & maintained 6 enterprise-scale AI/ML models on Palantir Foundry for automated document classification, & document-entity extraction.',
+      'Built 3 AI services & models using Foundry\'s AIP Logic function blocks, then deployed them via proprietary software built on Foundry.',
+      'Optimized RAG-based models with JSON validation checks for reliable LLM outputs, cutting token usage & costs by $5,000/model/month while boosting query speed.'
     ],
     tags: ['Python', 'Palantir Foundry', 'Document Search', 'NLP', 'MS Azure']
   },
