@@ -18,61 +18,32 @@
             </p>
           </div>
         </div>
-        <div class="about-image" data-aos="fade-up" data-aos-delay="200">
-          <div class="image-wrapper">
-            <img src="/portraits/Nitanshu_Joshi_5.jpg" alt="Nitanshu Joshi">
-          </div>
-        </div>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
+section {
+  padding: 90px 0;
+}
+
 .about-text {
-  grid-column: span 8;
-}
-
-.about-image {
-  grid-column: span 4;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-
-.image-wrapper {
-  width: 100%;
-  max-width: 300px;
-  filter: grayscale(100%);
-  transition: var(--transition);
-  border: 1px solid var(--border-color);
-  padding: 10px;
-}
-
-.image-wrapper:hover {
-  filter: grayscale(0%);
-}
-
-.image-wrapper img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
+  grid-column: span 10;
 }
 
 .about-description {
-  max-width: 600px;
+  max-width: 740px;
   font-size: 1.1rem;
   line-height: 1.6;
 }
 
 @media (max-width: 768px) {
-  .about-text, .about-image {
-    grid-column: span 12;
+  section {
+    padding: 72px 0;
   }
-  .about-image {
-    order: -1;
-    justify-content: flex-start;
-    margin-bottom: 40px;
+  .about-text {
+    grid-column: span 12;
   }
   .display-2 {
     font-size: 2rem;

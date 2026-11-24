@@ -4,9 +4,10 @@
     <Hero />
     <main>
       <About />
-      <TechStack />
       <Projects />
+      <VibeProducts />
       <Articles />
+      <TechStack />
       <Experience />
       <Education />
       <Contact />
@@ -31,6 +32,7 @@ import Hero from './components/Hero.vue'
 import About from './components/About.vue'
 import TechStack from './components/TechStack.vue'
 import Projects from './components/Projects.vue'
+import VibeProducts from './components/VibeProducts.vue'
 import Articles from './components/Articles.vue'
 import Experience from './components/Experience.vue'
 import Education from './components/Education.vue'

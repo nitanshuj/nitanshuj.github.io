@@ -35,6 +35,10 @@ import { experience } from '../data.js'
 </script>
 
 <style scoped>
+section {
+  padding: 90px 0;
+}
+
 .experience-item {
   padding: 60px 0;
   border-bottom: 1px solid var(--border-color);
@@ -78,10 +82,13 @@ import { experience } from '../data.js'
 }
 
 .tag-mini {
+  font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-color);
-  background-color: var(--border-color);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
   padding: 4px 10px;
   margin-right: 8px;
   margin-bottom: 8px;

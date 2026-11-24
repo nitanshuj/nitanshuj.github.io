@@ -85,6 +85,10 @@ const stacks = [
 </script>
 
 <style scoped>
+section {
+  padding: 80px 0;
+}
+
 .tech-list {
   display: flex;
   flex-direction: column;

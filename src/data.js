@@ -1,3 +1,25 @@
+export const vibeProducts = [
+  {
+    id: 'iconic-cafe-hub',
+    title: 'Iconic Cafe Hub',
+    image: '/product_images/product_1_iconic_cafe_hub.png',
+    liveDemo: 'https://indiecoffeehub.netlify.app/',
+    categories: ['agentic-products', 'ai-agents'],
+    agentStack: ['Claude Code', 'FastAPI', 'Vue 3'],
+    badges: ['Agentic Dev', 'Claude Code', 'Vue 3', 'FastAPI'],
+    description: 'AI-curated discovery platform for independent third-wave specialty cafes with automated vibe matching and neighborhood guides.'
+  },
+  {
+    id: 'planora',
+    title: 'Planora',
+    image: '/product_images/product_2_planora.png',
+    liveDemo: 'https://planorav2.vercel.app/',
+    categories: ['agentic-products', 'genai-llm'],
+    badges: ['Life OS', 'Task Focus', 'AI Receipts OCR', 'Trip Planner'],
+    description: 'Unified Personal Life OS combining focused task management, AI receipt OCR financial planning, and structured trip itineraries in one cohesive web application.'
+  }
+]
+
 export const projects = [
   {
     id: 'ecoaction-ai',
@@ -75,38 +97,50 @@ export const projects = [
 
 export const articles = [
   {
+    title: 'AI Engineer Interview Questions — Level 2 (Part 1)',
+    image: '/article_images/article_8.png',
+    link: 'https://medium.com/@nitanshuj138/ai-engineer-interview-questions-level-2-part-1-8d47900e10a9',
+    description: 'Mastering LLM Fine-Tuning, PEFT, and GPU Memory Economics'
+  },
+  {
+    title: 'AI Engineer Interview Questions — Level 1',
+    image: '/article_images/article_7.png',
+    link: 'https://medium.com/@nitanshuj138/ai-engineer-interview-questions-level-1-8e95789c392f',
+    description: 'Easy Interview questions — Part 1'
+  },
+  {
     title: 'Talk Smarter to Claude: A Practical Guide to Prompting Better Within Limits',
-    image: '/project_images/article_6_talk Smarter_to_Claude.png',
+    image: '/article_images/article_6_talk Smarter_to_Claude.png',
     link: '#',
     description: 'How a few simple habits can stretch your Claude sessions further than you thought possible.'
   },
   {
     title: '10 Interesting MLOps Interview Questions for ML Engineers',
-    image: '/project_images/article_5.png',
+    image: '/article_images/article_5.png',
     link: 'https://medium.com/@nitanshuj138/10-interesting-mlops-interview-questions-for-ml-engineers-eb2c1f9329ae',
     description: 'Essential Questions to Prepare for Your Next Role in MLOps & ML Engineering'
   },
   {
     title: 'Production ML Is Different: A Brutally Honest Guide to MLOps Pipelines',
-    image: '/project_images/article_4.png',
+    image: '/article_images/article_4.png',
     link: 'https://medium.com/@nitanshuj138/mlops-the-11-stage-pipeline-that-separates-data-scientists-from-ml-engineers-9410d27ef805',
     description: 'The 11-Stage Pipeline That Separates Data Scientists From ML Engineers'
   },
   {
     title: 'Why Your RAG Sucks (And How to Fix It)',
-    image: '/project_images/article_3.png',
+    image: '/article_images/article_3.png',
     link: 'https://medium.com/@nitanshuj138/why-your-rag-sucks-and-how-to-fix-it-849585ff5a5e',
     description: 'From Generic Chunking-based RAG to Category-Aware RAG: A Deep Dive into Production-Ready Document Processing'
   },
   {
     title: 'A Multi-Agent ArXiv Research Assistant',
-    image: '/project_images/article_2_arxiv_AI_assistant_Agent.png',
+    image: '/article_images/article_2_arxiv_AI_assistant_Agent.png',
     link: 'https://medium.com/@nitanshuj138/a-multi-agent-system-to-find-top-innovative-arxiv-papers-2a440709f832',
     description: 'A Multi Agent Framework that helps with researching the top AI Papers in ArXiv'
   },
   {
     title: 'My Experiments with Sleep',
-    image: '/project_images/article_1_my_experiements_with_sleep.jpg',
+    image: '/article_images/article_1_my_experiements_with_sleep.jpg',
     link: 'https://medium.com/@nitanshuj138/my-experiments-with-sleep-a45235c03c06',
     description: 'Time series analysis of sleep'
   }

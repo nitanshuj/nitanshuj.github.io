@@ -1,17 +1,15 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './assets/main.css'
 
-// Import Bootstrap
+// Import Bootstrap & vendor styles first
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-
-// Import Font Awesome
 import '@fortawesome/fontawesome-free/css/all.min.css'
-
-// Import AOS
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+
+// Import our custom design system last so custom tokens override vendor defaults
+import './assets/main.css'
 
 // Initialize AOS
 AOS.init({

@@ -50,6 +50,10 @@ const socials = [
 </script>
 
 <style scoped>
+section {
+  padding: 80px 0;
+}
+
 .contact-header {
   margin-bottom: 80px;
 }
@@ -94,6 +98,7 @@ const socials = [
   width: 48px;
   height: 48px;
   border: 1px solid var(--border-color);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
