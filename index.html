@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light" data-bs-theme="light">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/jpeg" href="/portraits/Nitanshu_Joshi_5.jpg" />
@@ -18,8 +18,7 @@
       (function() {
         try {
           var saved = localStorage.getItem('theme');
-          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          var theme = saved || (prefersDark ? 'dark' : 'light');
+          var theme = saved === 'dark' ? 'dark' : 'light';
           document.documentElement.setAttribute('data-theme', theme);
           document.documentElement.setAttribute('data-bs-theme', theme);
         } catch (e) {}
